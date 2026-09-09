@@ -1,0 +1,63 @@
+
+/* Hide matplotlib toolbar (Pyodide canvas) */
+.matplotlib-toolbar {
+  display: none !important;
+}
+
+/* ===== Layout polish ===== */
+
+/* Page max width for readability */
+.page-columns {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left navigation column */
+.sidebar {
+  width: 220px;
+}
+
+/* Content column spacing */
+.main {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Center matplotlib canvases */
+canvas {
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Slight card-style feel for plots */
+canvas {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Reduce excessive spacing around code cells */
+.cell-output-display {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Tab polish */
+.nav-tabs .nav-link {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #f5f5f5;
+  border-bottom-color: transparent;
+}
+
+/* Headings spacing */
+h2, h3 {
+  margin-top: 2rem;
+}
+
+/* Green pyodide status light alignment */
+.pyodide-status {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,19 @@
+plugins:
+  - name: pyodide-interaktiv
+    repo: https://github.com/Erasmus-CTM/pyodide-interaktiv.git
+    ref: issue-1-webagg
+    path: _extensions/pyodide-interaktiv
+
+  - name: math-exercise
+    repo: https://github.com/Erasmus-CTM/math-exercise.git
+    ref: main
+    path: _extensions/math-exercise
+
+  - name: jsxgraph
+    repo: https://github.com/Erasmus-CTM/math-exercise.git
+    ref: main
+    path: _extensions/jsxgraph
+
+  - name: py-exercise
+    repo: https://github.com/Erasmus-CTM/py-exercise.git
+    path: _extensions/py-exercise

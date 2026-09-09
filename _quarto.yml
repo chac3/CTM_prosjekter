@@ -1,0 +1,70 @@
+project:
+  type: website
+
+lang: nb
+
+filters:
+  - pyodide-interaktiv
+  - jsxgraph
+  - math-exercise
+  - py-exercise
+
+website:
+  title: "Matematikk 3A"
+  sidebar:
+    style: "docked"
+    contents:
+      - text: "IDE / Readme"
+        file: pages/page1.qmd
+
+      - text: "Emneinnhold"
+        file: pages/emneinnhold.qmd
+
+      - section: "Tall og algoritmer"
+        contents:
+          - text: "Uke 1 – regnetid, binære tall og tall på datamaskiner"
+            file: pages/page2.qmd
+          - text: "Uke 2 – fikspunktiterasjon"
+            file: pages/page4.qmd
+
+      - section: "Numerisk lineær algebra"
+        contents:
+          - text: "Uke 3 – vektorrom, kolonnerom og nullrom"
+            file: pages/uke3.qmd
+          - text: "Uke 4 – ortogonalitet, projeksjon og minste kvadrater"
+            file: pages/uke4.qmd
+          - text: "Uke 5 – egenverdier og gjentatt matrisemultiplikasjon"
+            file: pages/uke5.qmd
+          - text: "Uke 6 – iterative metoder for lineære systemer"
+            file: pages/uke6.qmd
+          - text: "Uke 7 – singulærverdidekomposisjon"
+            file: pages/uke7.qmd
+
+      - section: "Optimering"
+        contents:
+          - text: "Uke 8 – introduksjon til optimering"
+            file: pages/uke8.qmd
+          - text: "Uke 9 – grunnleggende prinsipper, gittersøk og gradientmetoden"
+            file: pages/uke9.qmd
+          - text: "Uke 10 – Newtons metode"
+            file: pages/uke10.qmd
+          - text: "Uke 11 – lineær programmering"
+            file: pages/uke11.qmd
+          - text: "Uke 12 – optimering med bibetingelser og minste kvadrater"
+            file: pages/uke12.qmd
+
+      - section: "Projects"
+        contents:
+          - pages/project_week1.qmd
+          - pages/project_week2.qmd
+          - pages/project_week3.qmd
+
+      - section: "Eksamensoppgaver"
+        contents:
+          - text: "Flyttall og numerisk stabilitet"
+            file: pages/page5.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
