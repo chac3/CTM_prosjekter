@@ -1,0 +1,856 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Biohydrogenfabrikken\n",
+    "\n",
+    "## Stoffstrømmer, reaktorkinetikk og hydrogenproduksjon\n",
+    "\n",
+    "### Pilotprosjekt for Matematikk 1, logistikk og bioteknologi\n",
+    "\n",
+    "Et biologisk reaktorsystem omdanner karbohydratrikt avløpsvann til organiske syrer og hydrogen. Prosessen har to hovedtrinn:\n",
+    "\n",
+    "```text\n",
+    "karbohydrat\n",
+    "   ├──> laktat ──> acetat\n",
+    "   │            ├─> butyrat\n",
+    "   │            └─> hydrogen\n",
+    "   ├──> acetat\n",
+    "   └──> hydrogen\n",
+    "```\n",
+    "\n",
+    "Den første mikrobielle gruppen omdanner karbohydrat raskt. En annen gruppe omdanner laktat langsommere. Derfor kan laktat bygge seg opp før det senere omdannes videre.\n",
+    "\n",
+    "Prosjektet har fem deler:\n",
+    "\n",
+    "1. **Reaksjonsnettverk:** støkiometrisk matrise og samlet produktutbytte\n",
+    "2. **Én biologisk reaksjon:** skalar ODE og metningskinetikk\n",
+    "3. **Batchreaktor:** et femkomponents vektor-ODE-system\n",
+    "4. **Kontinuerlig reaktor:** innstrømning, utstrømning og oppholdstid\n",
+    "5. **Egenmoder:** linearisering, stabilitet og biologiske tidsskalaer\n",
+    "\n",
+    "### Læringsmål\n",
+    "\n",
+    "Etter prosjektet skal du kunne\n",
+    "\n",
+    "- bygge en støkiometrisk matrise fra et reaksjonsdiagram,\n",
+    "- tolke fortegn, kolonner og produktutbytter,\n",
+    "- bruke matriser til å kombinere flere reaksjonstrinn,\n",
+    "- implementere Monod-lignende metningskinetikk,\n",
+    "- bruke Euler på en skalar ODE,\n",
+    "- skrive en reaksjonsmodell som $\\dot x=Nr(x)$,\n",
+    "- simulere karbohydrat, laktat, acetat, butyrat og hydrogen,\n",
+    "- formulere en kontinuerlig omrørt reaktor,\n",
+    "- finne en stasjonær tilstand numerisk,\n",
+    "- beregne en numerisk Jacobimatrise,\n",
+    "- tolke egenverdier som raske og langsomme biologiske moder.\n",
+    "\n",
+    "### Viktig avgrensning\n",
+    "\n",
+    "Utbyttekoeffisientene er oppgitt på COD-basis. De skal ikke tolkes som vanlige massefraksjoner. Modellen beskriver ikke pH, gass-væske-likevekt, temperaturvariasjon, alle mikrobielle grupper eller alle mellomprodukter. Parameterne brukes som et pedagogisk referansetilfelle."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import matplotlib.pyplot as plt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Referanseparametre\n",
+    "\n",
+    "Vi bruker to reaksjoner:\n",
+    "\n",
+    "$$C\\longrightarrow f_{C,L}L+f_{C,A}A+f_{C,H}H,$$\n",
+    "\n",
+    "$$L\\longrightarrow f_{L,A}A+f_{L,B}B+f_{L,H}H.$$\n",
+    "\n",
+    "Her betegner\n",
+    "\n",
+    "- $C$: karbohydrat\n",
+    "- $L$: laktat\n",
+    "- $A$: acetat\n",
+    "- $B$: butyrat\n",
+    "- $H$: kumulativt produsert hydrogen, uttrykt på modellens COD-basis\n",
+    "\n",
+    "Utbyttekoeffisienter:\n",
+    "\n",
+    "$$f_{C,L}=0.72,\\quad f_{C,A}=0.26,\\quad f_{C,H}=0.02,$$\n",
+    "\n",
+    "$$f_{L,A}=0.19,\\quad f_{L,B}=1.12,\\quad f_{L,H}=0.06.$$\n",
+    "\n",
+    "Kinetiske parametre:\n",
+    "\n",
+    "$$k_C=3.62\\ \\mathrm{h^{-1}},\\quad K_{S,C}=76\\ \\mathrm{g\\,COD/L},$$\n",
+    "\n",
+    "$$k_L=0.030\\ \\mathrm{h^{-1}},\\quad K_{S,L}=0.82\\ \\mathrm{g\\,COD/L}.$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "f_CL, f_CA, f_CH = 0.72, 0.26, 0.02\n",
+    "f_LA, f_LB, f_LH = 0.19, 1.12, 0.06\n",
+    "\n",
+    "k_C = 3.62      # 1/h\n",
+    "KS_C = 76.0     # g COD/L\n",
+    "k_L = 0.030     # 1/h\n",
+    "KS_L = 0.82     # g COD/L\n",
+    "\n",
+    "# Effektive, konstante biomassefaktorer i hovedmodellen.\n",
+    "X_C = 8.0       # g COD/L, pedagogisk scenarioverdi\n",
+    "X_L = 3.0       # g COD/L, pedagogisk scenarioverdi"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Del A: Reaksjonsnettverket som lineær algebra\n",
+    "\n",
+    "## A.1 Støkiometrisk matrise\n",
+    "\n",
+    "Tilstandsvektoren er\n",
+    "\n",
+    "$$\n",
+    "\\boxed{x=(C,L,A,B,H)^T.}\n",
+    "$$\n",
+    "\n",
+    "Reaksjonsratevektoren er\n",
+    "\n",
+    "$$\n",
+    "\\boxed{r=(r_C,r_L)^T.}\n",
+    "$$\n",
+    "\n",
+    "Da kan modellen skrives\n",
+    "\n",
+    "$$\n",
+    "\\boxed{\\dot x=Nr,}\n",
+    "$$\n",
+    "\n",
+    "med\n",
+    "\n",
+    "$$\n",
+    "N=\n",
+    "\\begin{pmatrix}\n",
+    "-1&0\\\\\n",
+    "f_{C,L}&-1\\\\\n",
+    "f_{C,A}&f_{L,A}\\\\\n",
+    "0&f_{L,B}\\\\\n",
+    "f_{C,H}&f_{L,H}\n",
+    "\\end{pmatrix}.\n",
+    "$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Oppgave A1: Bygg og tolk $N$\n",
+    "\n",
+    "Bygg matrisen og forklar hver kolonne. Beregn $Nr$ når\n",
+    "\n",
+    "$$r_C=4.0,\\qquad r_L=1.0.$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "N = np.array([\n",
+    "    [..., ...],\n",
+    "    [..., ...],\n",
+    "    [..., ...],\n",
+    "    [..., ...],\n",
+    "    [..., ...]\n",
+    "], dtype=float)\n",
+    "\n",
+    "r_test = np.array([4.0, 1.0])\n",
+    "dx_test = ...\n",
+    "\n",
+    "print(\"N =\n",
+    "\", N)\n",
+    "print(\"Stoffendring N @ r =\", dx_test)\n",
+    "print(\"Rang:\", ...)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## A.2 Samlet utbytte gjennom to trinn\n",
+    "\n",
+    "Anta at én enhet karbohydrat først reagerer, og at alt produsert laktat deretter reagerer videre.\n",
+    "\n",
+    "Direkte produkter fra karbohydratruten:\n",
+    "\n",
+    "$$\n",
+    "y_C=\n",
+    "\\begin{pmatrix}\n",
+    "f_{C,A}\\\\0\\\\f_{C,H}\n",
+    "\\end{pmatrix}.\n",
+    "$$\n",
+    "\n",
+    "Produkter fra én enhet laktat:\n",
+    "\n",
+    "$$\n",
+    "y_L=\n",
+    "\\begin{pmatrix}\n",
+    "f_{L,A}\\\\f_{L,B}\\\\f_{L,H}\n",
+    "\\end{pmatrix}.\n",
+    "$$\n",
+    "\n",
+    "Samlet utbytte blir\n",
+    "\n",
+    "$$\n",
+    "\\boxed{y_{tot}=y_C+f_{C,L}y_L.}\n",
+    "$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "y_C = np.array([f_CA, 0.0, f_CH])\n",
+    "y_L = np.array([f_LA, f_LB, f_LH])\n",
+    "y_total = ...\n",
+    "\n",
+    "print(\"Samlet [acetat, butyrat, hydrogen] =\", y_total)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Oppgave A2: Delvis laktatomdanning\n",
+    "\n",
+    "La $\\theta\\in[0,1]$ være andelen produsert laktat som reagerer videre:\n",
+    "\n",
+    "$$\n",
+    "\\boxed{y(\\theta)=y_C+\\theta f_{C,L}y_L.}\n",
+    "$$\n",
+    "\n",
+    "Plott acetat-, butyrat- og hydrogenutbytte som funksjon av $\\theta$. Hvor stor andel av hydrogenet kommer fra andre reaksjonstrinn når $\\theta=1$?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "theta = np.linspace(0.0, 1.0, 101)\n",
+    "Y_theta = ...\n",
+    "\n",
+    "# Plott de tre produktutbyttene."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## A.3 COD-basis og modellregnskap\n",
+    "\n",
+    "At $f_{L,B}=1.12$ er større enn én betyr ikke uten videre at fysisk masse skapes. Koeffisientene er formulert på COD-basis, altså oksidasjonsekvivalenter.\n",
+    "\n",
+    "Diskuter:\n",
+    "\n",
+    "- hvorfor COD ikke er det samme som våt masse\n",
+    "- hvorfor koeffisientene ikke bør summeres som vanlige massefraksjoner\n",
+    "- hvorfor en full modell også trenger elektroner, gassfase og flere stoffbalanser"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Del B: Karbohydratreaksjonen som skalar ODE\n",
+    "\n",
+    "## B.1 Metningskinetikk\n",
+    "\n",
+    "Med konstant effektiv biomasse bruker vi\n",
+    "\n",
+    "$$\n",
+    "\\boxed{r_C(C)=k_CX_C\\frac{C}{K_{S,C}+C}.}\n",
+    "$$\n",
+    "\n",
+    "Karbohydratbalansen i en batch er\n",
+    "\n",
+    "$$\n",
+    "\\boxed{\\dot C=-r_C(C).}\n",
+    "$$\n",
+    "\n",
+    "For $C\\ll K_{S,C}$ er reaksjonen omtrent første orden. For $C\\gg K_{S,C}$ er den omtrent nullte orden."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def rate_C(C):\n",
+    "    C_pos = np.maximum(C, 0.0)\n",
+    "    return k_C*X_C*C_pos/(KS_C+C_pos)\n",
+    "\n",
+    "\n",
+    "def C_ode(t, C):\n",
+    "    return -rate_C(C)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Oppgave B1: Studer ratefunksjonen\n",
+    "\n",
+    "Plott $r_C(C)$ for $0\\leq C\\leq400$ g COD/L. Marker $K_{S,C}$ og maksimalraten $k_CX_C$."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "C_grid = np.linspace(0.0, 400.0, 500)\n",
+    "r_grid = ...\n",
+    "\n",
+    "# Plott og marker KS_C."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## B.2 Euler\n",
+    "\n",
+    "Bruk startkonsentrasjonen\n",
+    "\n",
+    "$$C(0)=160\\ \\mathrm{g\\,COD/L}.$$\n",
+    "\n",
+    "Simuler 48 timer. Hindre at et numerisk steg gir negativ konsentrasjon."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def euler_skalar(f, y0, sluttid, dt):\n",
+    "    n = int(round(sluttid/dt))\n",
+    "    t = np.linspace(0.0, n*dt, n+1)\n",
+    "    y = np.zeros(n+1)\n",
+    "    y[0] = y0\n",
+    "    for j in range(n):\n",
+    "        y[j+1] = ...\n",
+    "    return t, y\n",
+    "\n",
+    "# Sammenlign dt = 0.5, 0.1 og 0.02 timer."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Oppgave B2: Halveringstid og parameterfølsomhet\n",
+    "\n",
+    "Finn numerisk tidspunktet der $C$ første gang blir mindre enn $C(0)/2$. Sammenlign:\n",
+    "\n",
+    "- halv og dobbel $X_C$\n",
+    "- halv og dobbel $k_C$\n",
+    "- liten og stor $K_{S,C}$\n",
+    "- ulike startkonsentrasjoner"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Del C: Femkomponents batchmodell\n",
+    "\n",
+    "## C.1 Reaksjonsratene\n",
+    "\n",
+    "Laktatraten er\n",
+    "\n",
+    "$$\n",
+    "\\boxed{r_L(L)=k_LX_L\\frac{L}{K_{S,L}+L}.}\n",
+    "$$\n",
+    "\n",
+    "Hele batchmodellen er\n",
+    "\n",
+    "$$\n",
+    "\\boxed{\\dot x=Nr(x).}\n",
+    "$$\n",
+    "\n",
+    "Komponentvis:\n",
+    "\n",
+    "$$\\dot C=-r_C,$$\n",
+    "\n",
+    "$$\\dot L=f_{C,L}r_C-r_L,$$\n",
+    "\n",
+    "$$\\dot A=f_{C,A}r_C+f_{L,A}r_L,$$\n",
+    "\n",
+    "$$\\dot B=f_{L,B}r_L,$$\n",
+    "\n",
+    "$$\\dot H=f_{C,H}r_C+f_{L,H}r_L.$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def rate_L(L):\n",
+    "    L_pos = np.maximum(L, 0.0)\n",
+    "    return k_L*X_L*L_pos/(KS_L+L_pos)\n",
+    "\n",
+    "\n",
+    "def batch_ode(t, x):\n",
+    "    C, L, A, B, H = x\n",
+    "    r = np.array([rate_C(C), rate_L(L)])\n",
+    "    return ..."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Oppgave C1: Implementer vektor-Euler\n",
+    "\n",
+    "Start med\n",
+    "\n",
+    "$$x(0)=(160,0,0,0,0)^T$$\n",
+    "\n",
+    "og simuler 240 timer."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def euler_system(f, x0, sluttid, dt):\n",
+    "    n = int(round(sluttid/dt))\n",
+    "    t = np.linspace(0.0, n*dt, n+1)\n",
+    "    X = np.zeros((n+1, len(x0)))\n",
+    "    X[0] = x0\n",
+    "    for j in range(n):\n",
+    "        X[j+1] = ...\n",
+    "        X[j+1] = np.maximum(X[j+1], 0.0)\n",
+    "    return t, X\n",
+    "\n",
+    "x0_batch = np.array([160.0, 0.0, 0.0, 0.0, 0.0])\n",
+    "\n",
+    "# Simuler og plott alle fem komponenter."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Oppgave C2: Toppunkt for laktat\n",
+    "\n",
+    "Finn:\n",
+    "\n",
+    "- tidspunktet for maksimal laktatkonsentrasjon\n",
+    "- maksimal laktatkonsentrasjon\n",
+    "- tidspunktet der 95 prosent av karbohydratet er brukt\n",
+    "- hydrogenproduksjonen ved disse tidspunktene\n",
+    "\n",
+    "Forklar toppen i $L(t)$ ved å sammenligne produksjonsleddet $f_{C,L}r_C$ med forbruksleddet $r_L$."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Oppgave C3: Hydrogen fra første og andre trinn\n",
+    "\n",
+    "Utvid tilstanden med to bokføringsvariable:\n",
+    "\n",
+    "- $H_C$: hydrogen fra karbohydratruten\n",
+    "- $H_L$: hydrogen fra laktatruten\n",
+    "\n",
+    "slik at\n",
+    "\n",
+    "$$\\dot H_C=f_{C,H}r_C,$$\n",
+    "\n",
+    "$$\\dot H_L=f_{L,H}r_L.$$\n",
+    "\n",
+    "Kontroller at\n",
+    "\n",
+    "$$H=H_C+H_L.$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Lag en utvidet batchmodell med seks eller sju relevante bokføringsvariable."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## C.2 To alternative råstoff\n",
+    "\n",
+    "Sammenlign batcher med samme start-COD:\n",
+    "\n",
+    "1. alt som karbohydrat\n",
+    "2. alt som laktat\n",
+    "3. 75 prosent karbohydrat og 25 prosent laktat\n",
+    "\n",
+    "Sammenlign hydrogenprofil, produktfordeling og nødvendig prosesstid."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Del D: Kontinuerlig omrørt reaktor\n",
+    "\n",
+    "## D.1 Fortynning og innløp\n",
+    "\n",
+    "Med hydraulisk oppholdstid $\\tau$ blir modellen\n",
+    "\n",
+    "$$\n",
+    "\\boxed{\n",
+    "\\dot x=Nr(x)+\\frac1\\tau(x_{inn}-x).}\n",
+    "$$\n",
+    "\n",
+    "Vi bruker innløp med karbohydrat, men uten produktene:\n",
+    "\n",
+    "$$\n",
+    "x_{inn}=(C_{inn},0,0,0,0)^T.\n",
+    "$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "C_inn = 160.0\n",
+    "x_inn = np.array([C_inn, 0.0, 0.0, 0.0, 0.0])\n",
+    "tau_ref = 36.0  # timer\n",
+    "\n",
+    "\n",
+    "def cstr_ode(t, x, tau=tau_ref):\n",
+    "    reaksjon = batch_ode(t, x)\n",
+    "    transport = (x_inn-x)/tau\n",
+    "    return ..."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Oppgave D1: Finn en stasjonær driftstilstand\n",
+    "\n",
+    "Simuler lenge fra en rimelig starttilstand, og kontroller at\n",
+    "\n",
+    "$$\\|f(x^*)\\|$$\n",
+    "\n",
+    "er liten.\n",
+    "\n",
+    "Rapporter:\n",
+    "\n",
+    "- utløpskonsentrasjonene\n",
+    "- karbohydratomdanning\n",
+    "- hydrogenutstrømning $H/\\tau$ i modellens enheter\n",
+    "- laktatoppbygging"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x0_cstr = np.array([80.0, 20.0, 10.0, 1.0, 1.0])\n",
+    "\n",
+    "# Simuler for eksempel 1500 timer og finn x_stjerne."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Oppgave D2: Oppholdstid\n",
+    "\n",
+    "Undersøk\n",
+    "\n",
+    "$$\\tau=8,16,24,36,60,96\\ \\mathrm{timer}.$$\n",
+    "\n",
+    "For hver verdi beregnes:\n",
+    "\n",
+    "- karbohydratomdanning\n",
+    "- laktat i utløpet\n",
+    "- hydrogenrate ut av reaktoren\n",
+    "- hydrogen per innmatet karbohydrat\n",
+    "\n",
+    "Diskuter avveiningen mellom høy gjennomstrømning og høy omdanning."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## D.2 To reaktorer i serie\n",
+    "\n",
+    "En naturlig fordypning er:\n",
+    "\n",
+    "- reaktor 1 optimalisert for rask karbohydratomdanning\n",
+    "- reaktor 2 med lengre oppholdstid for laktatomdanning\n",
+    "\n",
+    "Utløpet fra reaktor 1 brukes som innløp til reaktor 2. Sammenlign med én reaktor med samme samlede oppholdstid."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Del E: Linearisering og egenmoder\n",
+    "\n",
+    "## E.1 Numerisk Jacobimatrise\n",
+    "\n",
+    "Rundt en stasjonær CSTR-tilstand $x^*$ gjelder omtrent\n",
+    "\n",
+    "$$\n",
+    "\\boxed{\\dot\\xi=J\\xi,\\qquad\\xi=x-x^*.}\n",
+    "$$\n",
+    "\n",
+    "Jacobimatrisen beregnes med sentrale differanser:\n",
+    "\n",
+    "$$\n",
+    "J_{ij}\\approx\n",
+    "\\frac{f_i(x^*+\\varepsilon e_j)-f_i(x^*-\\varepsilon e_j)}{2\\varepsilon}.\n",
+    "$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def numerisk_jacobi(f, x, eps=1e-5):\n",
+    "    x = np.asarray(x, dtype=float)\n",
+    "    n = len(x)\n",
+    "    J = np.zeros((n, n))\n",
+    "    for j in range(n):\n",
+    "        e = np.zeros(n)\n",
+    "        e[j] = eps\n",
+    "        J[:, j] = ...\n",
+    "    return J"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Oppgave E1: Finn egenverdiene\n",
+    "\n",
+    "Bruk likevekten fra del D. Beregn $J$, egenverdier og egenvektorer.\n",
+    "\n",
+    "Tolk:\n",
+    "\n",
+    "- raske negative egenverdier som rask karbohydrattilpasning\n",
+    "- langsommere egenverdier som laktat- og produktrespons\n",
+    "- fortynningsmoder knyttet til $1/\\tau$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# J = numerisk_jacobi(lambda t, x: cstr_ode(t, x, tau_ref), x_stjerne)\n",
+    "# egenverdier, P = np.linalg.eig(J)\n",
+    "# Sorter etter realdel og beregn tidskonstanter."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## E.2 Egenvektorer og biologisk tolkning\n",
+    "\n",
+    "Normaliser egenvektorene og undersøk hvilke komponenter som dominerer hver mode.\n",
+    "\n",
+    "Mulige tolkninger:\n",
+    "\n",
+    "- karbohydratmode\n",
+    "- laktatmode\n",
+    "- produktutvaskingsmode\n",
+    "- hydrogenbokføringsmode\n",
+    "\n",
+    "Merk at kumulative produkter i batch og konsentrasjoner i CSTR har ulik dynamisk betydning."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Oppgave E2: Direkte og lineær respons\n",
+    "\n",
+    "Øk innløpskarbohydratet med 2 prosent og sammenlign:\n",
+    "\n",
+    "- den ikke-lineære CSTR-modellen\n",
+    "- den lineære modellen $\\dot\\xi=J\\xi$\n",
+    "- en modal løsning dersom $J$ er diagonaliserbar\n",
+    "\n",
+    "Gjenta med en større forstyrrelse og vurder når lineariseringen blir unøyaktig."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Fordypning: Dynamiske biomasser\n",
+    "\n",
+    "La $X_C$ og $X_L$ bli tilstander:\n",
+    "\n",
+    "$$\n",
+    "\\boxed{\\dot X_C=Y_Cr_C-k_{d,C}X_C,}\n",
+    "$$\n",
+    "\n",
+    "$$\n",
+    "\\boxed{\\dot X_L=Y_Lr_L-k_{d,L}X_L.}\n",
+    "$$\n",
+    "\n",
+    "I en kontinuerlig reaktor må eventuell utvasking også tas med:\n",
+    "\n",
+    "$$-\\frac{X}{\\tau}.$$\n",
+    "\n",
+    "Dette kan gi:\n",
+    "\n",
+    "- oppstartsperiode\n",
+    "- biomasseutvasking ved liten oppholdstid\n",
+    "- flere biologiske tidsskalaer\n",
+    "- endret stabilitet\n",
+    "\n",
+    "Nye parametre må dokumenteres og følsomhetsanalyseres."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Næringsstoffer og medium\n",
+    "\n",
+    "Tilleggsdataene inneholder konsentrasjoner av blant annet nitrogen, fosfor, kalium, magnesium, kalsium og spormetaller i det syntetiske mediet.\n",
+    "\n",
+    "I hovedmodellen antas disse å være tilstrekkelige og ikke-begrensende. Som fordypning kan én næringsfaktor $n(t)\\in[0,1]$ multiplisere de biologiske ratene:\n",
+    "\n",
+    "$$r_C\\mapsto nr_C,\\qquad r_L\\mapsto nr_L.$$\n",
+    "\n",
+    "Diskuter hvorfor en slik enkeltfaktor fortsatt er en grov representasjon av næringsbegrensning."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Modellkritikk\n",
+    "\n",
+    "Diskuter minst seks punkter:\n",
+    "\n",
+    "- Utbyttekoeffisientene er på COD-basis.\n",
+    "- Effektive biomasser er konstante i hovedmodellen.\n",
+    "- Monod-lignende kinetikk beskriver ikke alle hemminger.\n",
+    "- pH er utelatt.\n",
+    "- Temperaturen er konstant.\n",
+    "- Hydrogenoverføring til gassfase er utelatt.\n",
+    "- Gassens partialtrykk påvirker ikke reaksjonene.\n",
+    "- Acetat og butyrat reagerer ikke videre.\n",
+    "- Ingen biomasseutvasking i hovedmodellen.\n",
+    "- Produktene antas fullstendig blandet.\n",
+    "- Reaktoren er idealisert som batch eller perfekt omrørt CSTR.\n",
+    "- Parameterne kan være korrelerte og usikre.\n",
+    "- Euler krever kontroll av tidssteget.\n",
+    "- Numerisk likevekt avhenger av simuleringstid og starttilstand.\n",
+    "- Lineariseringen gjelder bare nær valgt driftspunkt.\n",
+    "\n",
+    "## Mulige videreføringer\n",
+    "\n",
+    "- dynamiske biomasser\n",
+    "- temperaturavhengighet\n",
+    "- pH- og produkthemming\n",
+    "- gassfase og Henrys lov\n",
+    "- to reaktorer i serie\n",
+    "- parameterestimering fra måledata\n",
+    "- sammenligning med Gompertz-kurve\n",
+    "- optimal oppholdstid\n",
+    "- energibalanse for produsert hydrogen"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Oppsummering\n",
+    "\n",
+    "Skriv en kort rapport der du forklarer\n",
+    "\n",
+    "1. hvordan reaksjonsdiagrammet ga matrisen $N$,\n",
+    "2. hvordan to reaksjonstrinn ga samlet produktutbytte,\n",
+    "3. hvorfor COD-koeffisientene ikke er vanlige massefraksjoner,\n",
+    "4. hvordan metningskinetikken påvirket karbohydratforbruket,\n",
+    "5. hvorfor laktat først kunne bygge seg opp og senere avta,\n",
+    "6. hvordan matrisen gjorde den femkomponents ODE-en kompakt,\n",
+    "7. hvordan oppholdstid påvirket kontinuerlig drift,\n",
+    "8. hvilke biologiske tidsskalaer egenverdiene viste,\n",
+    "9. når den lineære modellen var en god tilnærming,\n",
+    "10. hvilke mekanismer som må legges til for en mer realistisk biohydrogenmodell."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Faglig bakgrunn\n",
+    "\n",
+    "Prosjektet bygger på en ADM1-inspirert biohydrogenmodell med karbohydrat- og laktatomdanning, oppgitte produktutbytter og metningskinetikk. Hovedmodellen er redusert slik at den støkiometriske matrisen, stoffbalansene og ODE-systemet forblir synlige."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "name": "python",
+   "version": "3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
