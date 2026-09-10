@@ -70,8 +70,8 @@ website:
 
       - section: "Matematikk 2 - PDE"
         contents:
-          - text: "A, AIS, signalbehandling"
-            file: projects-migrated/prosjekter-m2-jupyter/a-ais/index.qmd
+ #         - text: "A, AIS, signalbehandling"
+ #           file: projects-migrated/prosjekter-m2-jupyter/a-ais/index.qmd
           - text: "A, Elektro, telegrafister"
             file: projects-migrated/prosjekter-m2-jupyter/a-elektro/index.qmd
           - text: "B, Varme"
@@ -83,7 +83,9 @@ website:
           - text: "D, Data, Bildebehandling"
             file: projects-migrated/prosjekter-m2-jupyter/d-data/index.qmd
           - text: "D, Logistikk, Trafikk"
-            file: projects-migrated/prosjekter-m2-jupyter/d-logistikk/index.qmd    
+            file: projects-migrated/prosjekter-m2-jupyter/d-logistikk/index.qmd  
+          - text: "Varmetransport 25"
+            file: projects-migrated/prosjekt-ny/ prosjektoppgave-imax2022-imax2023-imax2024/index.qmd 
             
       - section: "Matematikk 2 - programmoduler"
         contents:
@@ -98,7 +100,56 @@ website:
           - text: "D, Data, Bildebehandling"
             file: projects-migrated/prosjekter-m2-jupyter/d-data-del2/index.qmd
           - text: "D, Logistikk, Trafikk"
-            file: projects-migrated/prosjekter-m2-jupyter/d-logistikk-del2/index.qmd   
+            file: projects-migrated/prosjekter-m2-jupyter/d-logistikk-del2/index.qmd
+            
+      - section: "Nye prosjekter"
+        contents:
+          - text: "Biohydrogen"
+            file: projects-migrated/prosjekter-m1-runde-2/biohydrogen-pilot-student/index.qmd
+          - text: "Blysyrebatteri"
+            file: projects-migrated/prosjekter-m1-runde-2/blysyrebatteri-pilot-student/index.qmd
+          - text: "Cellelogistikk"
+            file: projects-migrated/prosjekter-m1-runde-2/cellelogistikk-pilot-student/index.qmd
+          - text: "DC motor"
+            file: projects-migrated/prosjekter-m1-runde-2/dc-motor-pilot-student/index.qmd
+          - text: "Flystabilitet"
+            file: projects-migrated/prosjekter-m1-runde-2/flystabilitet-turbulens-pilot-student/index.qmd
+          - text: "Fuktig kjeller"
+            file: projects-migrated/prosjekter-m1-runde-2/fuktig-kjeller-pilot-student/index.qmd
+          - text: "Gjøvik space agency"
+            file: projects-migrated/prosjekter-m1-runde-2/gjovik-space-agency-pilot-student/index.qmd
+          - text: "Glidelager"
+            file: projects-migrated/prosjekter-m1-runde-2/glidelager-pilot-student-v2/index.qmd
+          - text: "Kavitasjon"
+            file: projects-migrated/prosjekter-m1-runde-2/kavitasjon-pilot-student/index.qmd
+          - text: "Kjernedannelse"
+            file: projects-migrated/prosjekter-m1-runde-2/kjernedannelse-pilot-student-v2/index.qmd
+          - text: "Lakselogistikk"
+            file: projects-migrated/prosjekter-m1-runde-2/lakselogistikk-pilot-student/index.qmd
+          - text: "Plastisk deformasjon"
+            file: projects-migrated/prosjekter-m1-runde-2/plastisk-deformasjon-pilot-student/index.qmd
+          - text: "Pumpekraftverk"
+            file: projects-migrated/prosjekter-m1-runde-2/pumpekraftverk-pilot-student/index.qmd
+          - text: "Robot kinematikk"
+            file: projects-migrated/prosjekter-m1-runde-2/robotkinematikk-pilot-student/index.qmd
+          - text: "Rust"
+            file: projects-migrated/prosjekter-m1-runde-2/rust-oksygentransport-pilot-student/index.qmd
+          - text: "Saltkraft"
+            file: projects-migrated/prosjekter-m1-runde-2/saltkraftverk-pilot-student/index.qmd
+          - text: "Skipstabilitet"
+            file: projects-migrated/prosjekter-m1-runde-2/skipstabilitet-turbulens-pilot-student/index.qmd
+          - text: "Solcelle"
+            file: projects-migrated/prosjekter-m1-runde-2/solcelle-dc-buss-pilot-student/index.qmd
+          - text: "Transformator"
+            file: projects-migrated/prosjekter-m1-runde-2/transformator-pilot-student/index.qmd
+          - text: "Vannett"
+            file: projects-migrated/prosjekter-m1-runde-2/vannett-trykk-scc-pilot-student/index.qmd
+          - text: "Varmestråling i bygg"
+            file: projects-migrated/prosjekter-m1-runde-2/varmestraling-bygg-radiositet-pilot-student/index.qmd
+          - text: "Watt kobling"
+            file: projects-migrated/prosjekter-m1-runde-2/watt-kobling-pilot-student/index.qmd
+                                    
+           
 
 
 format:
