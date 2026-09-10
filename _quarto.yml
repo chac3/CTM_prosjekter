@@ -20,49 +20,86 @@ website:
       - text: "Emneinnhold"
         file: pages/emneinnhold.qmd
 
-      - section: "Tall og algoritmer"
+      - section: "Matematikk 1A"
         contents:
-          - text: "Uke 1 – regnetid, binære tall og tall på datamaskiner"
-            file: pages/page2.qmd
-          - text: "Uke 2 – fikspunktiterasjon"
-            file: pages/page4.qmd
+          - text: "Data - fagverk"
+            file: projects-migrated/prosjekter-m1-jupyter/data1/index.qmd
+          - text: "Mekanikk - fagverk"
+            file: projects-migrated/prosjekter-m1-jupyter/mekanikk1/index.qmd
+          - text: "Geomatikk - gps"
+            file: projects-migrated/prosjekter-m1-jupyter/gps/index.qmd
+          - text: "Kjemi - støkoiometri"
+            file: projects-migrated/prosjekter-m1-jupyter/kjemi/index.qmd
+          - text: "Elektriske kretser - likevekt"
+            file: projects-migrated/prosjekter-m1-jupyter/kretser/index.qmd
+          - text: "Logistikk - likevekt"
+            file: projects-migrated/prosjekter-m1-jupyter/logistikk/index.qmd
 
-      - section: "Numerisk lineær algebra"
-        contents:
-          - text: "Uke 3 – vektorrom, kolonnerom og nullrom"
-            file: pages/uke3.qmd
-          - text: "Uke 4 – ortogonalitet, projeksjon og minste kvadrater"
-            file: pages/uke4.qmd
-          - text: "Uke 5 – egenverdier og gjentatt matrisemultiplikasjon"
-            file: pages/uke5.qmd
-          - text: "Uke 6 – iterative metoder for lineære systemer"
-            file: pages/uke6.qmd
-          - text: "Uke 7 – singulærverdidekomposisjon"
-            file: pages/uke7.qmd
 
-      - section: "Optimering"
+      - section: "Matematikk 1B"
         contents:
-          - text: "Uke 8 – introduksjon til optimering"
-            file: pages/uke8.qmd
-          - text: "Uke 9 – grunnleggende prinsipper, gittersøk og gradientmetoden"
-            file: pages/uke9.qmd
-          - text: "Uke 10 – Newtons metode"
-            file: pages/uke10.qmd
-          - text: "Uke 11 – lineær programmering"
-            file: pages/uke11.qmd
-          - text: "Uke 12 – optimering med bibetingelser og minste kvadrater"
-            file: pages/uke12.qmd
+          - text: "Data - markovkjede"
+            file: projects-migrated/prosjekter-m1-jupyter/data-oving2-oppgave/index.qmd
+          - text: "Mekanikk - knekking"
+            file: projects-migrated/prosjekter-m1-jupyter/mekanikk2-ny/index.qmd
+          - text: "Geomatikk - satelitt"
+            file: projects-migrated/prosjekter-m1-jupyter/geomatikk2/index.qmd
+          - text: "Kjemi - reaksjoner 1"
+            file: projects-migrated/prosjekter-m1-jupyter/kjemi2/index.qmd
+          - text: "Elektriske kretser - RLC 1"
+            file: projects-migrated/prosjekter-m1-jupyter/kretser2/index.qmd
+          - text: "Logistikk - dynamikk"
+            file: projects-migrated/prosjekter-m1-jupyter/logistikk2/index.qmd
+ 
 
-      - section: "Projects"
+      - section: "Matematikk 1C"
         contents:
-          - pages/project_week1.qmd
-          - pages/project_week2.qmd
-          - pages/project_week3.qmd
+          - text: "Data - fagverk"
+            file: projects-migrated/prosjekter-m1-jupyter/data-oving3-oppgave/index.qmd
+          - text: "Mekanikk - spenning"
+            file: projects-migrated/prosjekter-m1-jupyter/mekanikk3/index.qmd
+          - text: "Geomatikk - wobble"
+            file: projects-migrated/prosjekter-m1-jupyter/geomatikk3/index.qmd
+          - text: "Kjemi - reaksjoner 2"
+            file: projects-migrated/prosjekter-m1-jupyter/kjemi/index.qmd
+          - text: "Elektriske kretser - RLC 2"
+            file: projects-migrated/prosjekter-m1-jupyter/kretser3/index.qmd
+          - text: "Logistikk - dynamikk 2"
+            file: projects-migrated/prosjekter-m1-jupyter/logistikk3/index.qmd
+    
 
-      - section: "Eksamensoppgaver"
+      - section: "Matematikk 2 - PDE"
         contents:
-          - text: "Flyttall og numerisk stabilitet"
-            file: pages/page5.qmd
+          - text: "A, AIS, signalbehandling"
+            file: projects-migrated/prosjekter-m2-jupyter/a-ais/index.qmd
+          - text: "A, Elektro, telegrafister"
+            file: projects-migrated/prosjekter-m2-jupyter/a-elektro/index.qmd
+          - text: "B, Varme"
+            file: projects-migrated/prosjekter-m2-jupyter/b-1/index.qmd
+          - text: "B, Bølger"
+            file: projects-migrated/prosjekter-m2-jupyter/b2-forny-skip-hav/index.qmd
+          - text: "C, Fluider"
+            file: projects-migrated/prosjekter-m2-jupyter/c-bygg/index.qmd
+          - text: "D, Data, Bildebehandling"
+            file: projects-migrated/prosjekter-m2-jupyter/d-data/index.qmd
+          - text: "D, Logistikk, Trafikk"
+            file: projects-migrated/prosjekter-m2-jupyter/d-logistikk/index.qmd    
+            
+      - section: "Matematikk 2 - programmoduler"
+        contents:
+          - text: "A, Elektro, telegrafister"
+            file: projects-migrated/prosjekter-m2-jupyter/a-elektro-del2/index.qmd
+          - text: "B, Varme"
+            file: projects-migrated/prosjekter-m2-jupyter/b-1-del2/index.qmd
+          - text: "B, Bølger"
+            file: projects-migrated/prosjekter-m2-jupyter/b2-forny-skip-hav-del2/index.qmd
+          - text: "C, Fluider"
+            file: projects-migrated/prosjekter-m2-jupyter/c-bygg-del2/index.qmd
+          - text: "D, Data, Bildebehandling"
+            file: projects-migrated/prosjekter-m2-jupyter/d-data-del2/index.qmd
+          - text: "D, Logistikk, Trafikk"
+            file: projects-migrated/prosjekter-m2-jupyter/d-logistikk-del2/index.qmd   
+
 
 format:
   html:
