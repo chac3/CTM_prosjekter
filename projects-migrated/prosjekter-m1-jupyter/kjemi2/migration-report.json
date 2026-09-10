@@ -1,0 +1,46 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/Kjemi2.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/kjemi2/index.qmd",
+  "title": "Reaksjonskinetikk",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.539983+00:00",
+  "source_sha256": "8caefc7cbd9992e52186cdd0fe7c6591d1d4c4d265d15fcdcdc582b4d1175858",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "conda-base-py",
+  "language": "python",
+  "markdown_cells": 6,
+  "code_cells": 3,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 1,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    1,
+    6
+  ],
+  "possible_solution_cells": [],
+  "attachments_extracted": 1,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-5-screenshot-202023-10-20-20at-2016-11-18.png"
+  ],
+  "missing_local_files": [
+    "assets/attachment-5-screenshot-202023-10-20-20at-2016-11-18.png"
+  ],
+  "imports": [
+    "matplotlib",
+    "numpy",
+    "scipy"
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-5-screenshot-202023-10-20-20at-2016-11-18.png",
+      "cell_index": null
+    }
+  ]
+}

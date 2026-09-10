@@ -1,0 +1,43 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekt_ny/Prosjektoppgave IMAx2022 IMAx2023 IMAx2024.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekt-ny/prosjektoppgave-imax2022-imax2023-imax2024/index.qmd",
+  "title": "Prosjekt for IMAx2022/IMAx2023/IMAx2024",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.530549+00:00",
+  "source_sha256": "425c5609b68427abb7cd1eb736e89a0ed440758de3e6938d3864128d02f522b1",
+  "nbformat": 4,
+  "nbformat_minor": 2,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 11,
+  "code_cells": 0,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 0,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "possible_solution_cells": [
+    0,
+    5,
+    7
+  ],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [],
+  "missing_local_files": [],
+  "imports": [],
+  "issues": []
+}

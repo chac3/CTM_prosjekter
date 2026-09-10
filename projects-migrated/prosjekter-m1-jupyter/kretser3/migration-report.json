@@ -1,0 +1,54 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/Kretser3.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/kretser3/index.qmd",
+  "title": "Tidsavhengige kretser 2",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.546125+00:00",
+  "source_sha256": "448243976678771621d897e6b6ec04f183c20bdd63522512758fb58da18a231c",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "conda-base-py",
+  "language": "python",
+  "markdown_cells": 4,
+  "code_cells": 3,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 2,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    0,
+    1,
+    4
+  ],
+  "possible_solution_cells": [],
+  "attachments_extracted": 2,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-1-screenshot-202023-10-24-20at-2011-39-49.png",
+    "assets/attachment-3-krets-koblet.jpg"
+  ],
+  "missing_local_files": [
+    "assets/attachment-1-screenshot-202023-10-24-20at-2011-39-49.png",
+    "assets/attachment-3-krets-koblet.jpg"
+  ],
+  "imports": [
+    "matplotlib",
+    "numpy"
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-1-screenshot-202023-10-24-20at-2011-39-49.png",
+      "cell_index": null
+    },
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-3-krets-koblet.jpg",
+      "cell_index": null
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/geomatikk3.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/geomatikk3/index.qmd",
+  "title": "Ellipsoiden",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.558490+00:00",
+  "source_sha256": "9166ca65c28d60ea3239d63eba1c90b532de07275b22c225ae62bad45fced758",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 3,
+  "code_cells": 2,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 1,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    1,
+    3
+  ],
+  "possible_solution_cells": [],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [],
+  "missing_local_files": [],
+  "imports": [
+    "numpy"
+  ],
+  "issues": []
+}

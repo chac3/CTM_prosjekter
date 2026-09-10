@@ -1,0 +1,35 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/Data_Øving2_Oppgave.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/data-oving2-oppgave/index.qmd",
+  "title": "Øving 2",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.536559+00:00",
+  "source_sha256": "f5d1aa15aadc161b5082fef1277b50b2eedb53d03eb663a6ffad63ea78c0132a",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 9,
+  "code_cells": 14,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 5,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    5,
+    9,
+    14,
+    17
+  ],
+  "possible_solution_cells": [],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [],
+  "missing_local_files": [],
+  "imports": [
+    "numpy"
+  ],
+  "issues": []
+}

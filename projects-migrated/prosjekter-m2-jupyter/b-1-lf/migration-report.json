@@ -1,0 +1,65 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M2, Jupyter/B_1-lf.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m2-jupyter/b-1-lf/index.qmd",
+  "title": "B - Diffusjon og steking",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.629785+00:00",
+  "source_sha256": "b757e620ddd24c22f20fe45bdd26746a31662a47db78624375a8487c3b192118",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 21,
+  "code_cells": 9,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 7,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    1,
+    3,
+    6,
+    11,
+    17,
+    19,
+    22,
+    27
+  ],
+  "possible_solution_cells": [
+    2,
+    4,
+    6,
+    7,
+    9,
+    12,
+    18,
+    21,
+    24,
+    25,
+    28
+  ],
+  "attachments_extracted": 1,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-20-innspurt-202024-01-13-2014-16-15.png"
+  ],
+  "missing_local_files": [
+    "assets/attachment-20-innspurt-202024-01-13-2014-16-15.png"
+  ],
+  "imports": [
+    "IPython",
+    "matplotlib",
+    "numpy",
+    "scipy"
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-20-innspurt-202024-01-13-2014-16-15.png",
+      "cell_index": null
+    }
+  ]
+}

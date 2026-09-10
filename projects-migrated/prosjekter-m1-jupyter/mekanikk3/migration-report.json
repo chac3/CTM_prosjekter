@@ -1,0 +1,50 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/Mekanikk3.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/mekanikk3/index.qmd",
+  "title": "Spenning og tøyning",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.552911+00:00",
+  "source_sha256": "08b8804f7624c67a5cc368640ac26f60c66a218b74f7c316a6476203a6afa542",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 5,
+  "code_cells": 2,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 0,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    1,
+    5
+  ],
+  "possible_solution_cells": [],
+  "attachments_extracted": 2,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-2-screenshot-202023-11-10-20at-2011-29-35.png",
+    "assets/attachment-6-bjelke-2d-202023-10-25-2014-41-02.png"
+  ],
+  "missing_local_files": [
+    "assets/attachment-2-screenshot-202023-11-10-20at-2011-29-35.png",
+    "assets/attachment-6-bjelke-2d-202023-10-25-2014-41-02.png"
+  ],
+  "imports": [],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-2-screenshot-202023-11-10-20at-2011-29-35.png",
+      "cell_index": null
+    },
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-6-bjelke-2d-202023-10-25-2014-41-02.png",
+      "cell_index": null
+    }
+  ]
+}

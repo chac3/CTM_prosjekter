@@ -1,0 +1,30 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/GPS-fasit.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/gps-fasit/index.qmd",
+  "title": "GPS og lineær algebra",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.537403+00:00",
+  "source_sha256": "7e63358f1101c9667582d04a2392fac83b137be64b4d6b91a718fcb950b0df35",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 7,
+  "code_cells": 7,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 4,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [],
+  "possible_solution_cells": [],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [],
+  "missing_local_files": [],
+  "imports": [
+    "numpy"
+  ],
+  "issues": []
+}

@@ -1,0 +1,32 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/data_fasit.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/data-fasit/index.qmd",
+  "title": "Data Fasit",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.554688+00:00",
+  "source_sha256": "798271845fcd4429a67d7b4eea05dfb59199774b1d434291480b441c367c443f",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 0,
+  "code_cells": 6,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 1,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [],
+  "possible_solution_cells": [],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [],
+  "missing_local_files": [],
+  "imports": [
+    "copy",
+    "math",
+    "numpy"
+  ],
+  "issues": []
+}

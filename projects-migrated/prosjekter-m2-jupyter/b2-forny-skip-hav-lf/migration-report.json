@@ -1,0 +1,48 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M2, Jupyter/B2_forny_skip_hav-lf.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m2-jupyter/b2-forny-skip-hav-lf/index.qmd",
+  "title": "B2 - Vannbølger",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.625619+00:00",
+  "source_sha256": "7e0feac261d5c112dd6fd8c832fead66c664171e53c167e79a3320b9da24a880",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "conda-base-py",
+  "language": "python",
+  "markdown_cells": 20,
+  "code_cells": 10,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 8,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    4,
+    7,
+    10,
+    14,
+    21,
+    28
+  ],
+  "possible_solution_cells": [
+    5,
+    8,
+    11,
+    15,
+    17,
+    19,
+    21,
+    22
+  ],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [],
+  "missing_local_files": [],
+  "imports": [
+    "matplotlib",
+    "numpy",
+    "scipy"
+  ],
+  "issues": []
+}

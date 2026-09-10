@@ -1,0 +1,33 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M2, Jupyter/D_data.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m2-jupyter/d-data/index.qmd",
+  "title": "D - Bildebehandling, diffusjon og Prims algoritme",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.643039+00:00",
+  "source_sha256": "57017d937f106edd2ac4bc19c85e6bb1c37a914e2329e41c744fda0a785c8191",
+  "nbformat": 4,
+  "nbformat_minor": 2,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 5,
+  "code_cells": 5,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 0,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    2,
+    4,
+    6,
+    8
+  ],
+  "possible_solution_cells": [],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [],
+  "missing_local_files": [],
+  "imports": [],
+  "issues": []
+}

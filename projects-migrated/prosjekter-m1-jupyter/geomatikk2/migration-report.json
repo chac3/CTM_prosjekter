@@ -1,0 +1,44 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/geomatikk2.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/geomatikk2/index.qmd",
+  "title": "Øving 2: Satellittbaner",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.556606+00:00",
+  "source_sha256": "fcf36d71b573164eb79bad96974f651ddff19e302f21fbeeb5a61b821ca4da36",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 1,
+  "code_cells": 2,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 0,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [],
+  "possible_solution_cells": [
+    0
+  ],
+  "attachments_extracted": 1,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-1-satellitt-202023-10-21-2015-21-17.png"
+  ],
+  "missing_local_files": [
+    "assets/attachment-1-satellitt-202023-10-21-2015-21-17.png"
+  ],
+  "imports": [
+    "matplotlib",
+    "numpy"
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-1-satellitt-202023-10-21-2015-21-17.png",
+      "cell_index": null
+    }
+  ]
+}

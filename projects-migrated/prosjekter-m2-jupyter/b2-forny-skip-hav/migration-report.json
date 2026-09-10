@@ -1,0 +1,55 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M2, Jupyter/B2_forny_skip_hav.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m2-jupyter/b2-forny-skip-hav/index.qmd",
+  "title": "B2 - Vannbølger",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.628164+00:00",
+  "source_sha256": "2c34c67c402c01f8cd17d4199b85609ef725e7c132d1d3c7473374cb35c6fa5a",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 10,
+  "code_cells": 5,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 0,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    4,
+    5,
+    7,
+    10,
+    13
+  ],
+  "possible_solution_cells": [
+    13
+  ],
+  "attachments_extracted": 2,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-10-skjermbilde-202024-e2-80-9301-e2-80-9327-20kl-c2-a010-46-23-202024-01-27-2009-47-09.png",
+    "assets/attachment-13-skjermbilde-202024-e2-80-9301-e2-80-9327-20kl-c2-a010-48-08-202024-01-27-2009-48-25.png"
+  ],
+  "missing_local_files": [
+    "assets/attachment-10-skjermbilde-202024-e2-80-9301-e2-80-9327-20kl-c2-a010-46-23-202024-01-27-2009-47-09.png",
+    "assets/attachment-13-skjermbilde-202024-e2-80-9301-e2-80-9327-20kl-c2-a010-48-08-202024-01-27-2009-48-25.png"
+  ],
+  "imports": [],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-10-skjermbilde-202024-e2-80-9301-e2-80-9327-20kl-c2-a010-46-23-202024-01-27-2009-47-09.png",
+      "cell_index": null
+    },
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-13-skjermbilde-202024-e2-80-9301-e2-80-9327-20kl-c2-a010-48-08-202024-01-27-2009-48-25.png",
+      "cell_index": null
+    }
+  ]
+}

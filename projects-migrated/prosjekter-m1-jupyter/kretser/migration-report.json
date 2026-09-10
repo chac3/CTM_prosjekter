@@ -1,0 +1,46 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/kretser.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/kretser/index.qmd",
+  "title": "Kirchhoffs lover og lineær algebra",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.560429+00:00",
+  "source_sha256": "c2e6b2e4d9716745ec4b0b2d4445fdb52fff6b8308395981628c379cd08670c0",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "conda-base-py",
+  "language": "python",
+  "markdown_cells": 4,
+  "code_cells": 2,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 1,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    2,
+    4
+  ],
+  "possible_solution_cells": [
+    3
+  ],
+  "attachments_extracted": 1,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-2-krets-1.png"
+  ],
+  "missing_local_files": [
+    "assets/attachment-2-krets-1.png"
+  ],
+  "imports": [
+    "numpy"
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-2-krets-1.png",
+      "cell_index": null
+    }
+  ]
+}

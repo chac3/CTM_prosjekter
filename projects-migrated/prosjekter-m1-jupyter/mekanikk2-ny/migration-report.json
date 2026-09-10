@@ -1,0 +1,61 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/mekanikk2-ny.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/mekanikk2-ny/index.qmd",
+  "title": "Øving 2: Knekning",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.567352+00:00",
+  "source_sha256": "2b82d2c6031a7d004c21a7e01f19627ea1832eb17536d50abc12deb96a808b73",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 5,
+  "code_cells": 1,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 0,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    2,
+    4
+  ],
+  "possible_solution_cells": [
+    2,
+    4
+  ],
+  "attachments_extracted": 3,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-1-screenshot-202023-10-20-20at-2015-24-21.png",
+    "assets/attachment-2-screenshot-202023-10-20-20at-2015-31-18.png",
+    "assets/attachment-4-screenshot-202023-10-20-20at-2015-36-02.png"
+  ],
+  "missing_local_files": [
+    "assets/attachment-1-screenshot-202023-10-20-20at-2015-24-21.png",
+    "assets/attachment-2-screenshot-202023-10-20-20at-2015-31-18.png",
+    "assets/attachment-4-screenshot-202023-10-20-20at-2015-36-02.png"
+  ],
+  "imports": [],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-1-screenshot-202023-10-20-20at-2015-24-21.png",
+      "cell_index": null
+    },
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-2-screenshot-202023-10-20-20at-2015-31-18.png",
+      "cell_index": null
+    },
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-4-screenshot-202023-10-20-20at-2015-36-02.png",
+      "cell_index": null
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/Kretser2.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/kretser2/index.qmd",
+  "title": "Tidsavhengige kretser",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.542144+00:00",
+  "source_sha256": "8d88abb0438799efc774162159dc0005f5763fee213e696457e8b74497122a4f",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "conda-base-py",
+  "language": "python",
+  "markdown_cells": 5,
+  "code_cells": 3,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 1,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    2,
+    3,
+    6
+  ],
+  "possible_solution_cells": [],
+  "attachments_extracted": 1,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-1-screenshot-202023-10-20-20at-2013-44-00.png"
+  ],
+  "missing_local_files": [
+    "assets/attachment-1-screenshot-202023-10-20-20at-2013-44-00.png"
+  ],
+  "imports": [
+    "matplotlib",
+    "numpy"
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-1-screenshot-202023-10-20-20at-2013-44-00.png",
+      "cell_index": null
+    }
+  ]
+}

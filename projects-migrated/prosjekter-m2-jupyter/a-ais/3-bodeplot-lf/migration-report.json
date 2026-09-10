@@ -1,0 +1,44 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M2, Jupyter/A_AIS/3_Bodeplot_LF.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m2-jupyter/a-ais/3-bodeplot-lf/index.qmd",
+  "title": "Oppgave 3: Frekvensegenskaper RLC-krets",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.603501+00:00",
+  "source_sha256": "3f27eea3de2ef0cd16433b2fcf07b090bb515cb2d05f9bb367896b8651a1a546",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 10,
+  "code_cells": 4,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 4,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    0,
+    1,
+    2,
+    5,
+    8,
+    11
+  ],
+  "possible_solution_cells": [
+    3,
+    6,
+    9,
+    12
+  ],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [],
+  "missing_local_files": [],
+  "imports": [
+    "matplotlib",
+    "numpy",
+    "scipy"
+  ],
+  "issues": []
+}

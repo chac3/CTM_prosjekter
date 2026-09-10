@@ -1,0 +1,48 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M2, Jupyter/D_logistikk.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m2-jupyter/d-logistikk/index.qmd",
+  "title": "D - Transport og forsyningskjeder",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.648654+00:00",
+  "source_sha256": "24ecd7bd55449b20bee5f60dc3a145f03c916ce2eec2b6eee71838c92b0daa33",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 10,
+  "code_cells": 3,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 0,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    9
+  ],
+  "possible_solution_cells": [
+    10
+  ],
+  "attachments_extracted": 1,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-10-innspurt-202024-01-12-2015-20-16.png"
+  ],
+  "missing_local_files": [
+    "assets/attachment-10-innspurt-202024-01-12-2015-20-16.png"
+  ],
+  "imports": [],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-10-innspurt-202024-01-12-2015-20-16.png",
+      "cell_index": null
+    }
+  ]
+}

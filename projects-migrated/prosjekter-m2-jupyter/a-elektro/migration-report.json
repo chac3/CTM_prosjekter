@@ -1,0 +1,61 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M2, Jupyter/A_elektro.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m2-jupyter/a-elektro/index.qmd",
+  "title": "Signalbehandling - Elektro",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.622803+00:00",
+  "source_sha256": "2446c57d6caae4adf5d1b8a4492924a55c44feac21b7602acdf991e1f8275d5e",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 13,
+  "code_cells": 1,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 0,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    3,
+    4,
+    5,
+    9,
+    12
+  ],
+  "possible_solution_cells": [],
+  "attachments_extracted": 3,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-6-skjermbilde-202024-01-11-20kl-2014-01-26.png",
+    "assets/attachment-7-skjermbilde-202024-01-11-20kl-2014-01-56.png",
+    "assets/attachment-11-img-3179.jpg"
+  ],
+  "missing_local_files": [
+    "assets/attachment-6-skjermbilde-202024-01-11-20kl-2014-01-26.png",
+    "assets/attachment-7-skjermbilde-202024-01-11-20kl-2014-01-56.png",
+    "assets/attachment-11-img-3179.jpg"
+  ],
+  "imports": [],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-6-skjermbilde-202024-01-11-20kl-2014-01-26.png",
+      "cell_index": null
+    },
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-7-skjermbilde-202024-01-11-20kl-2014-01-56.png",
+      "cell_index": null
+    },
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-11-img-3179.jpg",
+      "cell_index": null
+    }
+  ]
+}

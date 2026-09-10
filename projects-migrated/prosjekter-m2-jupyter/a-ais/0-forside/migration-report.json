@@ -1,0 +1,35 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M2, Jupyter/A_AIS/0_Forside.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m2-jupyter/a-ais/0-forside/index.qmd",
+  "title": "Signalbehandling - Elektro",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.598344+00:00",
+  "source_sha256": "844f6768534d562163aa50b8ba40842d8e2acf9128775d80627293478e4c0cc0",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 1,
+  "code_cells": 1,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 0,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    0
+  ],
+  "possible_solution_cells": [],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "1_Laplacetransformasjon.ipynb",
+    "2_Transferfunksjon.ipynb",
+    "3_Bodeplot.ipynb",
+    "4_Filter.ipynb"
+  ],
+  "missing_local_files": [],
+  "imports": [],
+  "issues": []
+}

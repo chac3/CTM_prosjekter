@@ -1,0 +1,38 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/Data1.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/data1/index.qmd",
+  "title": "Elementmetoden",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.533840+00:00",
+  "source_sha256": "1e203a1a3616da2647dfc47043bf873c19c5fd0ff8e810482de404bd2174eb46",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 9,
+  "code_cells": 10,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 3,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    9,
+    13,
+    15,
+    17
+  ],
+  "possible_solution_cells": [],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [],
+  "missing_local_files": [],
+  "imports": [
+    "copy",
+    "math",
+    "matplotlib",
+    "numpy"
+  ],
+  "issues": []
+}

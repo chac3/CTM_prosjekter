@@ -1,0 +1,45 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/logistikk2.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/logistikk2/index.qmd",
+  "title": "Bullwhip-effekten",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.564290+00:00",
+  "source_sha256": "0a99145fd736ef068f07799a45e3c62282b40aa0670cd39b0a744729e8c6f849",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "conda-base-py",
+  "language": "python",
+  "markdown_cells": 5,
+  "code_cells": 2,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 1,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    3,
+    5
+  ],
+  "possible_solution_cells": [],
+  "attachments_extracted": 1,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-2-flowchart.png"
+  ],
+  "missing_local_files": [
+    "assets/attachment-2-flowchart.png"
+  ],
+  "imports": [
+    "matplotlib",
+    "numpy"
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-2-flowchart.png",
+      "cell_index": null
+    }
+  ]
+}

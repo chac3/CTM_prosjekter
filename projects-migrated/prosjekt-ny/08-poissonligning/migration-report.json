@@ -1,0 +1,33 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekt_ny/08 - Poissonligning.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekt-ny/08-poissonligning/index.qmd",
+  "title": "Poissonligningen",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.513168+00:00",
+  "source_sha256": "45092c2987c892c6d366af8e217c6b861de0b32197e9dc3d59351aafdbd15858",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 7,
+  "code_cells": 4,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 4,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [],
+  "possible_solution_cells": [
+    1
+  ],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [],
+  "missing_local_files": [],
+  "imports": [
+    "matplotlib",
+    "numpy"
+  ],
+  "issues": []
+}

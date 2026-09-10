@@ -1,0 +1,52 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, runde 2/lakselogistikk_pilot_student.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-runde-2/lakselogistikk-pilot-student/index.qmd",
+  "title": "Samspill mellom villaks, fiskeri og havbruk",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.584071+00:00",
+  "source_sha256": "468c2604585389ba228c28a6a3d1ecfd0de4f121672134f21f7983f54bda94bf",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "conda-base-py",
+  "language": "python",
+  "markdown_cells": 16,
+  "code_cells": 13,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 0,
+  "error_outputs": 0,
+  "incomplete_code_cells": 5,
+  "possible_exercise_cells": [
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    12,
+    14,
+    15,
+    16,
+    17,
+    20,
+    22,
+    24,
+    25,
+    26
+  ],
+  "possible_solution_cells": [
+    5,
+    20
+  ],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [],
+  "missing_local_files": [],
+  "imports": [
+    "matplotlib",
+    "numpy"
+  ],
+  "issues": []
+}

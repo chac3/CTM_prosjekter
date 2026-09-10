@@ -1,0 +1,62 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/mekanikk2-ny-løsningsforslag.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/mekanikk2-ny-losningsforslag/index.qmd",
+  "title": "Øving 2: Knekning",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.565524+00:00",
+  "source_sha256": "0776109249b33e3221fa7ad0502d7dbecc72c8b76df4514fc56eda71dd33b8a7",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 7,
+  "code_cells": 2,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 0,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    2,
+    6
+  ],
+  "possible_solution_cells": [
+    2,
+    6,
+    7
+  ],
+  "attachments_extracted": 3,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-1-screenshot-202023-10-20-20at-2015-24-21.png",
+    "assets/attachment-2-screenshot-202023-10-20-20at-2015-31-18.png",
+    "assets/attachment-5-screenshot-202023-10-20-20at-2015-36-02.png"
+  ],
+  "missing_local_files": [
+    "assets/attachment-1-screenshot-202023-10-20-20at-2015-24-21.png",
+    "assets/attachment-2-screenshot-202023-10-20-20at-2015-31-18.png",
+    "assets/attachment-5-screenshot-202023-10-20-20at-2015-36-02.png"
+  ],
+  "imports": [],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-1-screenshot-202023-10-20-20at-2015-24-21.png",
+      "cell_index": null
+    },
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-2-screenshot-202023-10-20-20at-2015-31-18.png",
+      "cell_index": null
+    },
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-5-screenshot-202023-10-20-20at-2015-36-02.png",
+      "cell_index": null
+    }
+  ]
+}

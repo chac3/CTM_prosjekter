@@ -1,0 +1,44 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, Jupyter/Logistikk3.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-jupyter/logistikk3/index.qmd",
+  "title": "Dynamikk i forsyningskjeder",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.549043+00:00",
+  "source_sha256": "cf47143395b23e2e10a87c6f28abe5093e436f13a9b9d32bb2992d4c9da30dff",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "conda-base-py",
+  "language": "python",
+  "markdown_cells": 6,
+  "code_cells": 6,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 4,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [],
+  "possible_solution_cells": [
+    2
+  ],
+  "attachments_extracted": 1,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "assets/attachment-1-logistikk-202023-10-20-2013-01-06.png"
+  ],
+  "missing_local_files": [
+    "assets/attachment-1-logistikk-202023-10-20-2013-01-06.png"
+  ],
+  "imports": [
+    "matplotlib",
+    "numpy"
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "missing_local_file",
+      "message": "Missing local file: assets/attachment-1-logistikk-202023-10-20-2013-01-06.png",
+      "cell_index": null
+    }
+  ]
+}

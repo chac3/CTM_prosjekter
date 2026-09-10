@@ -1,0 +1,53 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M1, runde 2/cellelogistikk_pilot_student.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m1-runde-2/cellelogistikk-pilot-student/index.qmd",
+  "title": "Cellelogistikk",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.572407+00:00",
+  "source_sha256": "a0af9bafde3153995e7673244fd53cd18f1eae9ed3cc34d5feb8b77d4fd5f052",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 28,
+  "code_cells": 18,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 0,
+  "error_outputs": 0,
+  "incomplete_code_cells": 7,
+  "possible_exercise_cells": [
+    7,
+    8,
+    9,
+    10,
+    13,
+    16,
+    17,
+    18,
+    22,
+    23,
+    24,
+    25,
+    30,
+    31,
+    32,
+    34,
+    36,
+    37,
+    39
+  ],
+  "possible_solution_cells": [
+    41
+  ],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [],
+  "missing_local_files": [],
+  "imports": [
+    "matplotlib",
+    "numpy"
+  ],
+  "issues": []
+}

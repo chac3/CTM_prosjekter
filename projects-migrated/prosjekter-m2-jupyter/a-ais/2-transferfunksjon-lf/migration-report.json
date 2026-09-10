@@ -1,0 +1,41 @@
+{
+  "source": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/legacy/Prosjekter M2, Jupyter/A_AIS/2_Transferfunksjon_LF.ipynb",
+  "target": "/Users/chcurry/Library/CloudStorage/OneDrive-NTNU/Documents/FTS/FTS 2.0/projects-migrated/prosjekter-m2-jupyter/a-ais/2-transferfunksjon-lf/index.qmd",
+  "title": "Oppgave 2: Transferfunksjon for RLC-krets",
+  "status": "converted",
+  "tool_version": "0.1.0",
+  "converted_at": "2026-09-09T09:10:13.602311+00:00",
+  "source_sha256": "72896445bc2ffa519909a2f83c05d9d1cf3477c5c028b026acda9c67b86cec26",
+  "nbformat": 4,
+  "nbformat_minor": 5,
+  "kernel_name": "python3",
+  "language": "python",
+  "markdown_cells": 5,
+  "code_cells": 1,
+  "raw_cells": 0,
+  "unknown_cells": 0,
+  "cells_with_outputs": 1,
+  "error_outputs": 0,
+  "incomplete_code_cells": 0,
+  "possible_exercise_cells": [
+    0,
+    2,
+    4
+  ],
+  "possible_solution_cells": [
+    2,
+    5
+  ],
+  "attachments_extracted": 0,
+  "output_assets_extracted": 0,
+  "local_links": [
+    "Figurer/RLC-krets.png"
+  ],
+  "missing_local_files": [],
+  "imports": [
+    "matplotlib",
+    "numpy",
+    "scipy"
+  ],
+  "issues": []
+}
