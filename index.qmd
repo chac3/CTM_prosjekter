@@ -1,7 +1,9 @@
 
 ---
-title: "Matematikk for ingeniørfag 3A"
+title: "Prosjekter for ingeniørmatematikk"
 format: html
 ---
+
+Side under utvikling. For tida finnes det gamle prosjekter, og utkast til nye.
 
 Velg ei side fra venstre kolonne.

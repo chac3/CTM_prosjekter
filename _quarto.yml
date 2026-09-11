@@ -14,11 +14,11 @@ website:
   sidebar:
     style: "docked"
     contents:
-      - text: "IDE / Readme"
-        file: pages/page1.qmd
+      #- text: "IDE / Readme"
+      #  file: pages/page1.qmd
 
-      - text: "Emneinnhold"
-        file: pages/emneinnhold.qmd
+      #- text: "Emneinnhold"
+      #  file: pages/emneinnhold.qmd
 
       - section: "Matematikk 1A"
         contents:
@@ -55,7 +55,7 @@ website:
       - section: "Matematikk 1C"
         contents:
           - text: "Data - fagverk"
-            file: projects-migrated/prosjekter-m1-jupyter/data-oving3-oppgave/index.qmd
+            file: projects-migrated/prosjekter-m1-jupyter/data-oving-3-oppgave/index.qmd
           - text: "Mekanikk - spenning"
             file: projects-migrated/prosjekter-m1-jupyter/mekanikk3/index.qmd
           - text: "Geomatikk - wobble"
@@ -85,7 +85,7 @@ website:
           - text: "D, Logistikk, Trafikk"
             file: projects-migrated/prosjekter-m2-jupyter/d-logistikk/index.qmd  
           - text: "Varmetransport 25"
-            file: projects-migrated/prosjekt-ny/ prosjektoppgave-imax2022-imax2023-imax2024/index.qmd 
+            file: projects-migrated/prosjekt-ny/prosjektoppgave-imax2022-imax2023-imax2024/index.qmd 
             
       - section: "Matematikk 2 - programmoduler"
         contents:
@@ -123,7 +123,7 @@ website:
           - text: "Kavitasjon"
             file: projects-migrated/prosjekter-m1-runde-2/kavitasjon-pilot-student/index.qmd
           - text: "Kjernedannelse"
-            file: projects-migrated/prosjekter-m1-runde-2/kjernedannelse-pilot-student-v2/index.qmd
+            file: projects-migrated/prosjekter-m1-runde-2/kjernedannelse-pilot-v2/index.qmd
           - text: "Lakselogistikk"
             file: projects-migrated/prosjekter-m1-runde-2/lakselogistikk-pilot-student/index.qmd
           - text: "Plastisk deformasjon"
@@ -137,7 +137,7 @@ website:
           - text: "Saltkraft"
             file: projects-migrated/prosjekter-m1-runde-2/saltkraftverk-pilot-student/index.qmd
           - text: "Skipstabilitet"
-            file: projects-migrated/prosjekter-m1-runde-2/skipstabilitet-turbulens-pilot-student/index.qmd
+            file: projects-migrated/prosjekter-m1-runde-2/skipstabilitet-pilot-student/index.qmd
           - text: "Solcelle"
             file: projects-migrated/prosjekter-m1-runde-2/solcelle-dc-buss-pilot-student/index.qmd
           - text: "Transformator"
