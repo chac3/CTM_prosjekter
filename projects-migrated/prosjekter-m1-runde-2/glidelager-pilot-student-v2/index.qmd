@@ -44,7 +44,10 @@ Etter prosjektet skal du kunne
 
 Dette er en pedagogisk modell. Den kan brukes til å utforske sammenhenger og størrelsesordener, men ikke til å dimensjonere et virkelig lager eller dokumentere sikker drift.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -105,7 +108,10 @@ Plott filmtykkelsen for flere verdier av $\varepsilon$.
 Kodecelle 5 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 R = 50e-3
@@ -246,7 +252,10 @@ Koden nedenfor beregner koeffisientene og skriver ut én rad om gangen. Kjør ce
 Kodecelle 10 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 mu = 0.015       # Pa s
@@ -319,7 +328,10 @@ Løs deretter systemet. Sett de fem ukjente trykkene inn mellom de kjente randve
 Kodecelle 12 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 p_indre = np.linalg.solve(A_trykk, b_trykk)
@@ -334,7 +346,10 @@ print("Residualnorm:", np.linalg.norm(residual))
 print("Maksimalt trykk:", np.max(p_A)/1e6, "MPa")
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 fig, ax = plt.subplots(2, 1, sharex=True)
@@ -415,7 +430,10 @@ Fortegnet avhenger av om normalvektoren velges utover fra akselen eller som kraf
 Kodecelle 16 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 theta_indre = theta_A[1:-1]
@@ -472,7 +490,10 @@ Forklar hvilke parametre som øker bæreevnen, og hvorfor et stort trykk ikke n�
 Kodecelle 19 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-19
 #| echo: true
 epsilon_verdier = np.linspace(0.1, 0.9, 17)
@@ -499,7 +520,10 @@ Kontroller også minste filmtykkelse ved denne eksentrisiteten.
 Kodecelle 21 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 W = 50_000.0  # N
@@ -560,7 +584,10 @@ T_{omg}=20^\circ\mathrm C,\quad T_0=20^\circ\mathrm C.$$
 Kodecelle 25 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 C_T = 8.0e4
@@ -584,7 +611,10 @@ Implementer Euler, og sammenlign med håndløsningen over minst fem tidskonstant
 Kodecelle 27 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 def temperatur_lineær(t, T):
@@ -640,7 +670,10 @@ Undersøk hvordan slutt-temperaturen påvirkes av $\beta$ og $\Omega$.
 Kodecelle 30 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-30
 #| echo: true
 mu0 = 0.015
@@ -724,7 +757,10 @@ $$\omega_x=\sqrt{k_x/m},\qquad
 Kodecelle 35 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-35
 #| echo: true
 m_rotor = 75.0
@@ -803,7 +839,10 @@ Slipp akselen fra en liten forskyvning og simuler uten ytre kraft.
 Kodecelle 39 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-39
 #| echo: true
 K = 1e6*np.array([
@@ -844,7 +883,10 @@ x_C = X_C[:, 0]
 y_C = X_C[:, 1]
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-40
 #| echo: true
 fig, ax = plt.subplots(1, 2, figsize=(11, 4))
@@ -886,7 +928,10 @@ Dersom dempingsmatrisen også er diagonal i den samme basisen, blir de nye koord
 Kodecelle 42 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-42
 #| echo: true
 eg_k, P = ...
@@ -931,7 +976,10 @@ Implementer ubalansekraften og simuler ved flere rotasjonshastigheter. Plott aks
 Kodecelle 45 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-45
 #| echo: true
 m_u = 0.020
@@ -979,7 +1027,10 @@ Forklar hvorfor denne kontrollen bare er geometrisk. Den dynamiske ODE-modellen 
 Kodecelle 48 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-48
 #| echo: true
 e_t = ...

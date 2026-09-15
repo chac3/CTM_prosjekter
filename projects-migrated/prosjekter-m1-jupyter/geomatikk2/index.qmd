@@ -39,7 +39,10 @@ $$
 2. Sett tilbake $r=u^{-1}$.
 3. Plott $r=r(\theta)$ for forskjellige parameterverdier. Hva slags muligheter er det?
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -55,7 +58,10 @@ fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
 ax.plot(theta, r(theta))
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 

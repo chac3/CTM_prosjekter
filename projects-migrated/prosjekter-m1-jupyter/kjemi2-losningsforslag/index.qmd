@@ -100,7 +100,10 @@ $$
 
 I eksemplene her er den temperaturforandringen ikke vesentlig, da den varierer seg ikke i nærheten av like fort som konsentrasjonen
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 import numpy as np
@@ -224,13 +227,19 @@ $$
 
 Vi kan se at det kommer til å avta mot en konstant ut ifra ligningen. Men ikke så lett å beregne konstanten ennå!
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 

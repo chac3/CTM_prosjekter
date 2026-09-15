@@ -44,7 +44,10 @@ Etter prosjektet skal du kunne
 
 Dette er en pedagogisk modell. Den kan brukes til å utforske sammenhenger og størrelsesordener, men ikke til å dimensjonere et virkelig lager eller dokumentere sikker drift.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -105,7 +108,10 @@ Plott filmtykkelsen for flere verdier av $\varepsilon$.
 Kodecelle 5 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 R = 50e-3
@@ -197,7 +203,10 @@ Randverdiene $p_0=p_N=0$ er allerede kjent.
 Kodecelle 10 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 mu = 0.015       # Pa s
@@ -243,7 +252,10 @@ print("Residualnorm:", ...)
 print("Maksimalt trykk:", np.max(p_A)/1e6, "MPa")
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 fig, ax = plt.subplots(2, 1, sharex=True)
@@ -282,7 +294,10 @@ Beregn kraftvektoren, størrelsen og retningen.
 Kodecelle 13 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 dtheta = theta_A[1] - theta_A[0]
@@ -317,7 +332,10 @@ Forklar hvilke parametre som øker bæreevnen, og hvorfor et stort trykk ikke n�
 Kodecelle 15 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-15
 #| echo: true
 epsilon_verdier = np.linspace(0.1, 0.9, 17)
@@ -344,7 +362,10 @@ Kontroller også minste filmtykkelse ved denne eksentrisiteten.
 Kodecelle 17 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-17
 #| echo: true
 W = 50_000.0  # N
@@ -405,7 +426,10 @@ T_{omg}=20^\circ\mathrm C,\quad T_0=20^\circ\mathrm C.$$
 Kodecelle 21 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 C_T = 8.0e4
@@ -429,7 +453,10 @@ Implementer Euler, og sammenlign med håndløsningen over minst fem tidskonstant
 Kodecelle 23 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 def temperatur_lineær(t, T):
@@ -485,7 +512,10 @@ Undersøk hvordan slutt-temperaturen påvirkes av $\beta$ og $\Omega$.
 Kodecelle 26 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-26
 #| echo: true
 mu0 = 0.015
@@ -569,7 +599,10 @@ $$\omega_x=\sqrt{k_x/m},\qquad
 Kodecelle 31 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-31
 #| echo: true
 m_rotor = 75.0
@@ -648,7 +681,10 @@ Slipp akselen fra en liten forskyvning og simuler uten ytre kraft.
 Kodecelle 35 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-35
 #| echo: true
 K = 1e6*np.array([
@@ -689,7 +725,10 @@ x_C = X_C[:, 0]
 y_C = X_C[:, 1]
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-36
 #| echo: true
 fig, ax = plt.subplots(1, 2, figsize=(11, 4))
@@ -731,7 +770,10 @@ Dersom dempingsmatrisen også er diagonal i den samme basisen, blir de nye koord
 Kodecelle 38 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-38
 #| echo: true
 eg_k, P = ...
@@ -776,7 +818,10 @@ Implementer ubalansekraften og simuler ved flere rotasjonshastigheter. Plott aks
 Kodecelle 41 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-41
 #| echo: true
 m_u = 0.020
@@ -824,7 +869,10 @@ Forklar hvorfor denne kontrollen bare er geometrisk. Den dynamiske ODE-modellen 
 Kodecelle 44 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-44
 #| echo: true
 e_t = ...

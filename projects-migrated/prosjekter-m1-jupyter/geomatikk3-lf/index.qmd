@@ -46,7 +46,10 @@ hvor $a, b, c$ er lengde av "semi-aksene", altså avstand fra origo til overflat
 Kodecelle 3 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 import numpy as np
@@ -145,7 +148,10 @@ $$
 
 dvs perioden på en wobble blir på cirka $1/\Omega$ døgn (se under). De verdiene gir har oppgitt gir mye fortere wobble enn Euler. Trolig skyldes det en feilaktig antakelse av jevn fordeling av jordens masse i beregning av $I_i$.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 a = 1/everdier[0]

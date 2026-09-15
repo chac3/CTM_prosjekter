@@ -33,7 +33,10 @@ Aiaiai. På det å finne et regneark!
 
 Man kan lett løse et system som har et entydig svar i Python:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 import numpy as np
@@ -49,7 +52,10 @@ print(u)
 
 Ellers hvis man vil finne nullrommet til et system er det ikke en like enkel sak. Den beste metoden er å bruke SVD (singular value decomposition), som ikke er pensum. Prat med din numerikklærer for å finne ut hvorfor vi liker det bedre enn redusert trappeform. Vi finner SVD under:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 C = np.array([[1,2,3],[4,5,6],[5,7,9]])
@@ -60,7 +66,10 @@ print(S)
 
 Hvis et av tallene over er lik (eller nesten lik) null, er nullrommet ikke tomt. Her ser vi at den 3. tall i S er tilnærmet null. Da er den 3. raden i V i nullrommet. Siden python teller fra 0 finner vi det ved å sette i=3-1=2 under:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 i = 2

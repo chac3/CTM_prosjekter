@@ -246,7 +246,10 @@ $$
 
 3. Se under, prøv forskjellige verdier.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 import numpy as np
@@ -276,7 +279,10 @@ fig, ax = plt.subplots()
 ax.plot(t,u)
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 import numpy as np
@@ -391,7 +397,10 @@ $$
 
 Dar oppstår sjokk momentant. *se bildet*
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 n = 100
@@ -423,7 +432,10 @@ for i in np.arange(m):
     plt.plot(x[:,i],u[:,i], color='b')
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-17
 #| echo: true
 rho1 = 0.5
@@ -549,7 +561,10 @@ vil ofte ikke ha noen løsninger, siden fluksen $f^1(u^1(t,0)) + f^2(u^2(t,0))$ 
 
 I praksis vil det tette seg ved krysset, ved at $u^1, u^2$ øker slik at $f^1(u^1)+f^2(u^2)$ minker. Det finnes modeller som uttrykker det ved en "entropibetingelse", men de blir for komplisert og vi vil ikke inn i detaljene.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 # Kryss 2 funker bedre.
@@ -605,7 +620,10 @@ from IPython.display import HTML
 HTML(ani.to_jshtml())
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-22
 #| echo: true
 # Kryss 1
@@ -706,7 +724,10 @@ $$
 Kodecelle 25 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 
@@ -743,7 +764,10 @@ Sett opp en vektet graf, med kostnad (i kroner per lastenhet):
 Kodecelle 27 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 

@@ -42,7 +42,10 @@ Etter prosjektet skal du kunne
 
 Prosjektet bruker Rayleigh–Plesset-ligningen som grunnmodell for en sfærisk boble i en stor væskemengde. Modellen er forenklet og beskriver ikke alle effekter ved en virkelig boblekollaps, særlig ikke væskekompressibilitet, bobler nær vegger eller avvik fra kuleform.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -121,7 +124,10 @@ Bruk trykk i kPa og volumstrøm i liter per sekund. Motstandene må da ha enhete
 Kodecelle 6 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 p_A = 120.0  # kPa, absolutt trykk
@@ -174,7 +180,10 @@ Marker damptrykket i figuren. Undersøk også om alle beregnede volumstrømmer h
 Kodecelle 9 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 p_v = 2.34
@@ -247,7 +256,10 @@ Det er tilstrekkelig å sette $R_0=1$ i denne skalerte oppgaven.
 Kodecelle 13 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 delta = 0.8
@@ -293,7 +305,10 @@ Kodecelle 15 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, 
 Kodecelle 15 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-15
 #| echo: true
 def linearisert_boble(x):
@@ -386,7 +401,10 @@ Dette representerer at bobla passerer et område med lavt trykk:
 
 Dette trykkforløpet er en pedagogisk inngangsfunksjon, ikke resultatet av en full strømningsberegning.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-18
 #| echo: true
 rho = 998.0          # kg/m^3
@@ -447,7 +465,10 @@ Implementer høyresiden nedenfor.
 Kodecelle 20 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-20
 #| echo: true
 def rayleigh_plesset(t, x):
@@ -473,7 +494,10 @@ Fullfør funksjonen. Simuleringen skal stanses dersom radiusen blir mindre enn e
 Kodecelle 22 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-22
 #| echo: true
 def euler_tidssystem(f, x0, T, h, R_min):
@@ -508,7 +532,10 @@ R_C = X_C[:, 0]
 U_C = X_C[:, 1]
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 fig, ax = plt.subplots(2, 1, sharex=True)
@@ -539,7 +566,10 @@ plt.show()
 Kodecelle 25 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 indeks_Rmaks = ...
@@ -576,7 +606,10 @@ Det lokale trykket trenger ikke nødvendigvis å være under damptrykket i hele 
 Kodecelle 28 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-28
 #| echo: true
 Delta_p_verdier = [10e3, 20e3, 35e3, 50e3]

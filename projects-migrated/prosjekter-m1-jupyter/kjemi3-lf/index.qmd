@@ -208,7 +208,10 @@ Anta at (alle reaksjoner går bare forlengs):
 Kodecelle 7 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 import numpy as np
@@ -272,7 +275,10 @@ $$
 \frac{d[Y]}{dt} = -[X]^2[Y] - [B][X]
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 

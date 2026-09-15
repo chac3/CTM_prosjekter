@@ -70,7 +70,10 @@ Etter prosjektet skal du kunne
 
 Dette er en liten pedagogisk cellemodell. Parameterne er syntetiske undervisningsverdier, ikke data for en bestemt organisme. Modellen beskriver ikke genregulering, ATP-balanse, alle metabolitter, toksisitet, celledeling eller stokastiske molekylprosesser.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -99,7 +102,10 @@ Aktivitetene er:
 3. proteinsyntese, $v_R$
 4. lipidsyntese, $v_L$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 stoff_navn = ["substrat S", "proteinbyggesteiner P", "lipider L"]
@@ -135,7 +141,10 @@ $$
 
 Kolonnene svarer til aktivitetene $(v_T,v_M,v_R,v_L)$.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 N = np.array([
@@ -181,7 +190,10 @@ Bygg systemet $Av=b$, løs det og kontroller residualet.
 Kodecelle 9 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 d_protein = 0.90
@@ -212,7 +224,10 @@ En nullromsvektor beskriver en kombinasjon av reaksjonsstrømmer som ikke endrer
 Kodecelle 11 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 U, s, VT = np.linalg.svd(N)
@@ -246,7 +261,10 @@ $$
 
 I denne første modellen er sammenhengen lineær.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 k_kapasitet = np.array([5.0, 3.0, 2.5, 1.5])
@@ -296,7 +314,10 @@ $$
 
 Her er $c_j$ ønsket proteinandel og $\beta_j$ produksjonskapasiteten per allokeringsenhet.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 c_protein_mål = np.array([0.25, 0.15, 0.40, 0.20])
@@ -317,7 +338,10 @@ Bygg et $5\times5$-system fra fire balanserte vekstligninger og sumkravet.
 Kodecelle 18 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-18
 #| echo: true
 A_alloc = np.zeros((5, 5))
@@ -380,7 +404,10 @@ Tilstanden er
 
 $$x=(S,P,L)^T.$$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 kT, kM, kR, kL = 6.0, 4.0, 3.2, 1.8
@@ -410,7 +437,10 @@ $$
 Kodecelle 23 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 def rater_metabolitt(x, S_ute=S_ute_normal):
@@ -444,7 +474,10 @@ og kontroller om systemet nærmer seg en stasjonær tilstand. Bruk flere tidsste
 Kodecelle 25 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 def euler_system(f, x0, sluttid, dt):
@@ -476,7 +509,10 @@ Undersøk:
 Kodecelle 27 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 def S_ute_tid(t):
@@ -533,7 +569,10 @@ $$
 \boxed{\alpha=(1-w)\alpha_{fattig}+w\alpha_{rik}.}
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-30
 #| echo: true
 alpha_fattig = np.array([0.20, 0.35, 0.30, 0.15])
@@ -555,7 +594,10 @@ Bruk de samme rateuttrykkene som i del C, men la proteinmengdene være tilstande
 Kodecelle 32 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-32
 #| echo: true
 def celle_ode(t, X, S_ute_funksjon=lambda t: 6.0):
@@ -596,7 +638,10 @@ Forklar hvorfor transportørsektoren øker, og hvorfor tilpasningen ikke skjer m
 Kodecelle 34 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-34
 #| echo: true
 X0_D = np.concatenate([[0.8, 0.8, 0.3], c_protein_mål])
@@ -637,7 +682,10 @@ Vi finner først en tilnærmet likevekt ved å simulere lenge i konstant rikt mi
 Kodecelle 37 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-37
 #| echo: true
 def numerisk_jacobi(f, x, eps=1e-6):
@@ -659,7 +707,10 @@ Simuler modellen med konstant $S_e=6.0$ til endringene er små. Kall sluttverdie
 Kodecelle 39 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-39
 #| echo: true
 # Finn X_stjerne ved lang simulering med lite tidssteg.
@@ -680,7 +731,10 @@ Undersøk komponentene i den langsomste egenvektoren. Er moden dominert av metab
 Kodecelle 41 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-41
 #| echo: true
 # J = numerisk_jacobi(...)

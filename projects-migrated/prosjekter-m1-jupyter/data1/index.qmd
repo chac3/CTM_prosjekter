@@ -20,7 +20,10 @@ Vi skal begynne å se på en viktig anvendelse av data i ingeniørfag, nemlig el
 
 Typisk krever vi både geometrisk og matematisk data, som egner seg godt til implementering som klasser. Et enkelt eksempel ser studenter som tar mekanikk 1, f eks bygg- og maskiningeniører. Det er 2-dimensjonale fagverk. Under ligger en bro, som danner geometrien til systemet. Koden som følger er skrevet av en matematiker og følger slett ikke god praksis!
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import matplotlib.pyplot as plt
@@ -79,7 +82,10 @@ En ekstra komplikasjon er at det finnes randbetingelser, dvs noder som er festet
 * $L_{ij}=1$ hvis $i$ er festet til bakken i retningen som innegår i $i$
 * $L_{ij}=0$ ellers
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 C = np.zeros(2)
@@ -106,7 +112,10 @@ L[4*m-1,q+2]=1
 
 Vi setter opp vektoren på høyre siden ved å bestemme oss for at enkle knutepunktene er holdt i ro ved eksterne krefter. Den første noden holdes i ro ved krefter i den vertikale og den horizontale retningen, mens den siste holdes i ro kun ved en kreft i den vertikale retningen.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 F=np.zeros([4*m,1])
@@ -126,14 +135,20 @@ Målet nå er å lage et program som koder 2d fagverk på en mer robust, objekt-
 
 Under har vi kodet en ny klasse, Mesh, som skal håndtere den geometriske dataen $(A,B)$. Målet er at i fremtid det skal kunne bli brukt til forskjellige geometrier, f. eks. trekanter istedet for staver, og at det skal kunne funke i 3-dimensjoner også.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 from copy import copy
 from math import sqrt
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 class Mesh:
@@ -189,7 +204,10 @@ Noen metoder mangler. Fyll dem ut selv.
 Kodecelle 11 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
     # legg til liste med nye knutepunkt        
@@ -208,7 +226,10 @@ Kodecelle 11 følger en oppgavetekst og kan vurderes for `py-exercise` eller en 
 
 Her kommer en iterator.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 class MeshIter:
@@ -238,7 +259,10 @@ Det finnes mangler i funksjonen som lager Stivhetsmatrisa. Fyll ut.
 Kodecelle 15 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-15
 #| echo: true
 import numpy as np
@@ -264,7 +288,10 @@ Løs sytemet fra innføringen ved å bruke koden under.
 Kodecelle 17 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-17
 #| echo: true
 mesh = Mesh()
@@ -289,7 +316,10 @@ Koden er fortsett verken pen eller robust.
 Kodecelle 19 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-19
 #| echo: true
 

@@ -429,7 +429,10 @@ $$
 Kodecelle 6 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 import numpy as np
@@ -450,7 +453,10 @@ Lag animasjoner som viser hvordan $u(x,t)$ endrer seg med hensyn på tiden.
 
 Svar deretter på c) og d) for hver av de tre verdiene av $p$.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 import numpy as np
@@ -509,7 +515,10 @@ for i in np.arange(1,n):
     u5[i,:] = lf(f5, 0, 0, u5[i-1,:],h,k,t[i])
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 fig, ax = plt.subplots()
@@ -526,7 +535,10 @@ from IPython.display import HTML
 HTML(ani.to_jshtml())
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 fig, ax = plt.subplots()
@@ -543,7 +555,10 @@ from IPython.display import HTML
 HTML(ani.to_jshtml())
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 fig, ax = plt.subplots()
@@ -560,7 +575,10 @@ from IPython.display import HTML
 HTML(ani.to_jshtml())
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 plt.plot(x,u1[-1,:])
@@ -579,7 +597,10 @@ For å løse problemet så må du bruke at:
 2. $V(t)=v(u(P(t), t))$
 3. $P(t + \Delta t) = P(t) + \Delta t\cdot V(t)$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 def f(P,x,n,u1):
@@ -613,7 +634,10 @@ Hva er tiden $t$ når alle bilene er i bevegelse?
 
 *Forresten er det litt rot mtp at ingen biler beveger seg fra høyre siden. Under er en løsning uten karakterstikker. Det blir kanskje et hakk vanskelig?*
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-17
 #| echo: true
 def K(pos):
@@ -693,7 +717,10 @@ Finn en numerisk løsning for likningen i a).
 
 Tegn grafen til løsningen sammen med løsningen fra a). Er løsningene like?
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 import scipy.sparse as sp
@@ -774,7 +801,10 @@ Bruk forlengs Euler med passende tidslengde.
 Kodecelle 29 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-29
 #| echo: true
 import matplotlib.pyplot as plt
@@ -855,7 +885,10 @@ Kodecelle 33 følger en oppgavetekst og kan vurderes for `py-exercise` eller en 
 Kodecelle 33 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-33
 #| echo: true
 m=100
@@ -976,7 +1009,10 @@ Lag en animasjon som viser hvordan temperaturen til legemet endrer seg over tid.
 Kodecelle 36 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-36
 #| echo: true
 import matplotlib.animation as animation
@@ -1110,7 +1146,10 @@ dette skjer.
 Kodecelle 39 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-39
 #| echo: true
 import matplotlib.animation as animation

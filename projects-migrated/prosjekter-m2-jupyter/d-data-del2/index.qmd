@@ -78,7 +78,10 @@ Løsningen vår var rundt 20 linjer. Det er greit om du skriver lang kode, men d
 Kodecelle 3 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 

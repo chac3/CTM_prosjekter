@@ -32,7 +32,10 @@ Kodecelle 4 følger en oppgavetekst og kan vurderes for `py-exercise` eller en i
 Kodecelle 4 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 import numpy as np
@@ -63,7 +66,10 @@ Det er på tid å reflektere litt mer over forhold mellom det du har lært i mat
 Kodecelle 6 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 

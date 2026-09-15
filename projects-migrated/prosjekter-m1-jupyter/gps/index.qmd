@@ -21,7 +21,10 @@ Har vi posisjonene $(x_i, y_i, z_i)$ i kartesiske koordinater, hvor origoen er j
 
 Her er noen data fra virkelighet:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -68,7 +71,10 @@ $
 
 Hvor $s_i = (x_i, y_i, z_i, R_i)$. Begynn ved å sett opp disse matrisene/vektorer i python under:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 
@@ -84,7 +90,10 @@ $\langle B^{-1}\vec{e}, B^{-1}\vec{e} \rangle \lambda^2
 
 Vi får to løsninger $\lambda_1, \lambda_2$. Bare en er riktig, men vi vet ikke hvilken ennå! Finn løsningen under:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 
@@ -96,7 +105,10 @@ Nå løser vi følgende system for $\vec{u}$
 
 $B\vec{u} = \vec{a} + \lambda_i\vec{e}$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 
@@ -104,7 +116,10 @@ $B\vec{u} = \vec{a} + \lambda_i\vec{e}$
 
 Hvilken $i$ bruker vi, 1 eller 2? Svaret: den som er riktig! Hvordan vet det? Svaret er at bare en gir en $\vec{u}$ som gir mening. For å finne ut hvilken (og tolke resultatet) gjør vi koordinatene i $\vec{u}$ om til noen lettere å tolke.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 def XYZtolatlonelev(position):
@@ -133,7 +148,10 @@ def XYZtolatlonelev(position):
 
 Sett inn de to svarene du får her.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 print(XYZtolatlonelev(u1[0:3]))
@@ -149,7 +167,10 @@ print(XYZtolatlonelev(u2[0:3]))
 
 Vi skal prate mer om sistnevnte senere. Metoden gitt har funker fortsett, men vi må ta i bruk 'pseudo-inversen' til matrisa. Det er tett tilknyttet til minste kvadraters metode.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 

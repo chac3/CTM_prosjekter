@@ -54,7 +54,10 @@ $$
 
 Vi kan gjøre om ligningen til et 4x4 system, for så å finne egenverdiene/vektorene med datamaskin.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 import numpy as np
@@ -79,7 +82,10 @@ print(evektorer)
 Kodecelle 6 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 import matplotlib.pyplot as plt
@@ -103,7 +109,10 @@ ax.plot(t,x[:,2])
 ax.plot(t,x[:,3])
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 

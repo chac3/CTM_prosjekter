@@ -46,7 +46,10 @@ hvor $a, b, c$ er lengde av "semi-aksene", altså avstand fra origo til overflat
 Kodecelle 3 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 import numpy as np
@@ -114,7 +117,10 @@ Hvis $\omega_1(0)=\omega_2(0)=0$, vil de forblir null for alle tid. Da får vi r
 Kodecelle 5 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 

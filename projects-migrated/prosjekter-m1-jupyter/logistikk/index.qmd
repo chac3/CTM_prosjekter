@@ -40,7 +40,10 @@ Matrisa $A=D-C$ er forskjell av ei leveransematrise som inneholder all produksjo
 
 ![Logistikk%202023-10-20%2013_01_06.png](assets/attachment-3-logistikk-202023-10-20-2013-01-06.png)
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 import numpy as np
@@ -86,7 +89,10 @@ Senere i kurset skal vi se på utvikling over tid. Men for tiden fokuserer vi p�
 
 Å finne nullrommet med datamaskin er ikke en enkel sak. Den beste metoden er å bruke SVD (singular value decomposition), som ikke er pensum. Prat med din numerikklærer for å finne ut hvorfor vi liker det bedre enn redusert trappeform. Vi finner SVD under:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 U, S, V = np.linalg.svd(A)
@@ -95,7 +101,10 @@ print(S)
 
 Hvis et av tallene over er lik (eller nesten lik) null, er nullrommet ikke tomt. Her ser vi at den 5. tall i S er tilnærmet null. Da er den 5. raden i V i nullrommet. Siden python teller fra 0 finner vi det ved å sette i=5-1=4 under:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 i = 4
@@ -120,7 +129,10 @@ Likevekten er altså at vi produserer like mye av hvert produkt.
 Kodecelle 11 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 

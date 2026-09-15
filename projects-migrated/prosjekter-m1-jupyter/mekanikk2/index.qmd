@@ -30,7 +30,10 @@ Det er en differensialligning som kan løses med integrasjon, om vi er oppgitt $
 Kodecelle 2 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 
@@ -78,7 +81,10 @@ Under ligger et kodefelt. Senere skal du løse bjelkeligningen numerisk. Det kan
 Kodecelle 5 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 

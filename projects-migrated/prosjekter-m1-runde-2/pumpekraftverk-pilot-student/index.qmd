@@ -49,7 +49,10 @@ Etter prosjektet skal du kunne
 
 Hovedmodellen antar stive rør og inkompressibelt vann. Den beskriver langsomme vannmasse- og svingesjaktbevegelser, ikke vandrende trykkbølger. Turbin- og regulatormodellene er pedagogiske og skal ikke brukes til dimensjonering eller sikkerhetsanalyse av virkelige anlegg.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -81,7 +84,10 @@ Parameterne er inspirert av et eksempelanlegg i den faglige bakgrunnen, men avru
 
 Disse verdiene gir et anlegg i størrelsesorden 80 til 90 MW i referansetilstanden.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 H_øvre_abs = 307.0
@@ -142,7 +148,10 @@ $$
 
 Dette er en lokal nettverksmodell, ikke den kvadratiske tapsloven som brukes senere.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 node_navn = ["øvre magasin", "fordelingspunkt", "inntak 1", "inntak 2", "nedre magasin"]
@@ -176,7 +185,10 @@ Kontroller symmetri, nullrom og egenverdier.
 Kodecelle 8 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 G_lin = ...
@@ -203,7 +215,10 @@ $$
 Kodecelle 10 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 ukjente = np.array([1, 2, 3])
@@ -234,7 +249,10 @@ Kontroller at kontinuiteten holder i de tre indre nodene.
 Kodecelle 12 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 q_kant = ...
@@ -262,7 +280,10 @@ $$
 Kodecelle 14 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 Q_agg = q_kant[3:5]
@@ -289,7 +310,10 @@ $$
 
 Den lineære tapsmodellen egner seg for håndløsning og små avvik rundt et driftspunkt.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 M_Q = M_tunnel + M_trykkrør
@@ -313,7 +337,10 @@ Løs analytisk for $Q(0)=0$.
 Kodecelle 18 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-18
 #| echo: true
 Q_likevekt = ...
@@ -335,7 +362,10 @@ Sammenlign flere tidssteg. Hva skjer dersom fallhøyden skifter fortegn, slik at
 Kodecelle 20 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-20
 #| echo: true
 def euler_skalar(f, y0, sluttid, dt):
@@ -368,7 +398,10 @@ Velg $R_q$ slik at $Q_{ref}$ er likevekt.
 Kodecelle 22 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-22
 #| echo: true
 R_kvadrat = Delta_H/(Q_ref*abs(Q_ref))
@@ -429,7 +462,10 @@ $$
 
 $k_T$ velges slik at $Q=Q_{ref}$ og $y=0.90$ er en likevekt.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-26
 #| echo: true
 epsilon_y = 1e-4
@@ -459,7 +495,10 @@ har nesten null derivert.
 Kodecelle 28 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-28
 #| echo: true
 def svingesjakt_ode_fast_y(t, x):
@@ -487,7 +526,10 @@ Undersøk virkningen av større og mindre svingesjaktareal.
 Kodecelle 30 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-30
 #| echo: true
 def euler_system(f, x0, sluttid, dt):
@@ -525,7 +567,10 @@ $$
 Kodecelle 32 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-32
 #| echo: true
 def y_referanse(t):
@@ -561,7 +606,10 @@ Forklar:
 Kodecelle 34 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-34
 #| echo: true
 x_ref_4 = np.array([Q_ref, Q_ref, z_ref, y_ref_normal])
@@ -579,7 +627,10 @@ $$
 
 I modellen brukes fortegnet til $Q_p$ for å skille strømretningen. Ved pumpedrift må egen pumpevirkningsgrad og motorkarakteristikk brukes.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-36
 #| echo: true
 def turbineffekt(Qp, y):
@@ -622,7 +673,10 @@ $$
 
 Deriverte av $RQ|Q|$ ved positiv $Q_{ref}$ gir $2RQ_{ref}$.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-39
 #| echo: true
 r_t_lin = 2*R_tunnel*Q_ref
@@ -655,7 +709,10 @@ kan
 Kodecelle 41 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-41
 #| echo: true
 egenverdier, P = ...
@@ -688,7 +745,10 @@ Sammenlign:
 Kodecelle 43 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-43
 #| echo: true
 # Kontroller diagonaliserbarhet og implementer modal simulering.

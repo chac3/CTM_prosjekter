@@ -25,7 +25,10 @@ Med andre ord betyr dette at sinusspenninger vil kun endre seg i amplitude og fa
 I denne oppgaven skal vi bruke Python til å kjøre noen simuleringer av RLC-retsen med sinusbølger $v_0(t) = A\cdot \sin(\omega \cdot t)$ som påtrykt spenningssignal, og analysere den kondensatorspenningen $v_C(t)$ som oppstår over tid. En sentral komponent i denne oppgaven vil være funksjonen [`scipy.signal.lsim`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.lsim.html#scipy.signal.lsim) som vi kan bruke til å simulere RLC-kretsens oppførsel med hvilken som helst funksjon for påtrykt spenning $v_0(t)$.
 
 Eksempel på bruk:
-```Python
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 import numpy as np
 import scipy.signal as sig
 
@@ -232,7 +235,10 @@ Kodecelle 10 følger en oppgavetekst og kan vurderes for `py-exercise` eller en 
 Kodecelle 10 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 # Løsning!
@@ -267,7 +273,10 @@ Kodecelle 13 følger en oppgavetekst og kan vurderes for `py-exercise` eller en 
 Kodecelle 13 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 # Løsning!

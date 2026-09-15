@@ -76,7 +76,10 @@ $$
 \frac{\partial \rho}{\partial t} + a\frac{\partial \rho}{\partial x} = 0.
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 
@@ -180,7 +183,10 @@ Sett $\nu = 0$ og løs ligningen med karakteristikker. Får vi sjokk? Tenk på g
 Kodecelle 7 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 
@@ -218,7 +224,10 @@ Hva slags flyte representeres?
 Kodecelle 9 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 x = np.linspace(-4, 4, 6)
@@ -278,7 +287,10 @@ Hva kan du si om forholdet mellom $a,b$ og størrelsen på åpningene?
 Kodecelle 12 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 
@@ -334,7 +346,10 @@ Kommenter resultatene. Ser de ut som bølger?
 Kodecelle 15 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-15
 #| echo: true
 

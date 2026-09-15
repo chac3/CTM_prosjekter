@@ -71,7 +71,10 @@ Med tilsvarende randbetingelser $w'(0)=w(0)=0$, $w''(L)=0$. Legg merke til at hv
 Kodecelle 6 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 

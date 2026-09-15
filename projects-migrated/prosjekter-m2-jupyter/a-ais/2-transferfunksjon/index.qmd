@@ -59,7 +59,10 @@ hva blir dempingsraten $\zeta$ og den naturlige frekvensen $\omega_0$ til kretse
 $$H(s) = \frac{s + 2}{s^2 + 6s + 9} = \frac{\mathbf{1}\cdot s + \mathbf{2}}{\mathbf{1} \cdot s^2 + \mathbf{6}\cdot s + \mathbf{9} } $$
 
 * Konstruksjon av transferfunksjon i Python:
-```Python
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 import scipy.signal as sig
 numerator = [1, 2]
 denominator = [1, 6, 9]
@@ -75,7 +78,10 @@ Bruk funksjonen [`step`](https://docs.scipy.org/doc/scipy/reference/generated/sc
 Kodecelle 6 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 

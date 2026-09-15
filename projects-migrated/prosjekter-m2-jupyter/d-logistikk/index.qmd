@@ -155,7 +155,10 @@ Finn $x(t)$ og tegn det under. Ser det realistisk ut?
 Kodecelle 7 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 
@@ -185,7 +188,10 @@ $$
 Kodecelle 9 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 
@@ -209,7 +215,10 @@ for hver veg. I tillegg må randbetingelsene passer sammen. Vi ser hvordan det f
 4. Implementere Lax-Friedrichs metode på kryss 2. Ta problemet "lyset går fra rødt til grønt". Hva slags randbetingelser ved overgangen trenger man i tillegg til informasjon om fluksen?
 5. Prøv å Lax-Friedrichs metode på kryss 1 også. Funket det? Mest sannsynlig ikke - hvorfor tror du det oppstår problemer? Foreslå (men ikke implementer) en bedre løsning for randbetingelsene i krysset.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 

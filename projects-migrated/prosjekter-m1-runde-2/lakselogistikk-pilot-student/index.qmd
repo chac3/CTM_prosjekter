@@ -57,7 +57,10 @@ $$\dot z=0.5z(0.62-0.20y-z).$$
 
 Parameterverdiene er pedagogisk konstruerte, ikke estimert fra feltdata.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 import numpy as np
@@ -78,7 +81,10 @@ Bruk `np.linalg.solve` til å finne den positive likevekten. Kontroller med resi
 Kodecelle 5 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 A = np.array([[1.0, 0.30, 0.20],
@@ -105,7 +111,10 @@ La $q=a_{13}$ beskrive hvor sterkt havbruksaktiviteten påvirker villaksens veks
 Kodecelle 8 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 q_verdier = np.array([0.20, 0.30, 0.40, 0.50])
@@ -142,7 +151,10 @@ Fullfør funksjonen.
 Kodecelle 11 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 def euler_skalar(f, x0, T, h):
@@ -158,7 +170,10 @@ def logistisk(x):
     return x * (1.28 - x)
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 t, x = euler_skalar(logistisk, x0=0.20, T=20.0, h=0.10)
@@ -177,7 +192,10 @@ Gjenta med $h=0.10,0.50,1.00,2.00$. Plott i samme koordinatsystem. Diskuter rime
 Kodecelle 14 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 for h in [0.10, 0.50, 1.00, 2.00]:
@@ -202,7 +220,10 @@ Fullfør modellfunksjonen.
 Kodecelle 16 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 def modell(u, q=0.20):
@@ -221,7 +242,10 @@ Fullfør en generell Euler-funksjon for vektorsystemer.
 Kodecelle 18 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-18
 #| echo: true
 def euler_system(f, u0, T, h):
@@ -236,7 +260,10 @@ def euler_system(f, u0, T, h):
 
 Bruk $\mathbf u(0)=(0.30,0.15,0.20)^T$, $h=0.05$ og $T=40$. Plott komponentene.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-20
 #| echo: true
 u0 = np.array([0.30, 0.15, 0.20])
@@ -258,7 +285,10 @@ Forklar forskjellen mellom: (1) en likevekt finnes, (2) én numerisk løsning se
 Kodecelle 22 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-22
 #| echo: true
 print("Siste verdi:", u[-1])
@@ -274,7 +304,10 @@ Simuler fra $(1.50,0.10,0.10)^T$, $(0.20,1.00,0.20)^T$ og $(0.20,0.20,1.00)^T$. 
 Kodecelle 24 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-24
 #| echo: true
 startverdier = [np.array([1.50, 0.10, 0.10]),
@@ -291,7 +324,10 @@ startverdier = [np.array([1.50, 0.10, 0.10]),
 Kodecelle 26 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-26
 #| echo: true
 q_ny = 0.40
@@ -312,7 +348,10 @@ Gjenta basissimuleringen med $h=0.20,0.10,0.05,0.025$. Sammenlikn minst to av: s
 Kodecelle 28 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-28
 #| echo: true
 for h in [0.20, 0.10, 0.05, 0.025]:

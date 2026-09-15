@@ -34,7 +34,10 @@ Vil signalet bli sendt ned linjen, uten tap av styrken til signalet (se under).
 Kodecelle 4 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 import matplotlib.animation as animation
@@ -127,13 +130,19 @@ Kommenter resultatene. Kan du forklarer det du fant i oppgave b?
 Kodecelle 6 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 # Animer av utviklingen av signalet
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 # Diskrete fouriertransform av funksjonen u
@@ -187,7 +196,10 @@ Kan du foreslå hvordan vi kan velge $L$, $C$ og $R$ for at bølgehastigheten sk
 Kodecelle 9 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 

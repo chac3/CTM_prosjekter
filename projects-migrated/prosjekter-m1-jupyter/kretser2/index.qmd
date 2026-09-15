@@ -49,7 +49,10 @@ $$\frac{dV}{dt} = \frac{2}{3kR} (-V^\frac{1}{2} + V_s V^{-\frac{1}{2}})$$
 
 Vi løser ligningen i kodefeltet under, og sammenligner resultatet med en lineær kondensator.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -106,7 +109,10 @@ Sammenlign kretsen for en lineære spoler med en ikke-lineær med $L(I)=k\frac{1
 Kodecelle 5 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 def L1(x,t):
@@ -145,7 +151,10 @@ Har er $V_s=V_s(t)$ en kjent spenningskilde.
 Kodecelle 8 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 

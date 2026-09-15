@@ -41,7 +41,10 @@ Repeter det du gjorde på forrige øving før du går videre. Du kommer ikke til
 
 Vi starter som vanlig med å importere matrisebiblioteket numpy.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 import numpy as np
@@ -95,7 +98,10 @@ så får jeg ikke 0-vektor som svar. Hva kan være en grunn for at det skjer?
 Kodecelle 6 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 
@@ -137,7 +143,10 @@ b) Vi har fylt vektoren $v$ med tilfeldige tall. Hvis vi er skikkelig uheldig, s
 Kodecelle 9 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 from random import random
@@ -173,13 +182,19 @@ Forklar hvorfor disse tallene er like. Her vil du måtte bruke ting du har lært
 
 
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 

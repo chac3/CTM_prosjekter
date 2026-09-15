@@ -27,7 +27,10 @@ Husk at egenverdier/vektorer kan brukes til å grave i hva som skjer over lang t
 Kodecelle 2 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 
@@ -37,7 +40,10 @@ Kodecelle 2 følger en oppgavetekst og kan vurderes for `py-exercise` eller en i
 
 En klassisk anvendelse av slike metoder er pagerank.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 
@@ -51,7 +57,10 @@ Bruk koden til å finne en pagerank av følgende enkel nettverk.
 Kodecelle 6 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 

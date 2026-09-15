@@ -48,7 +48,10 @@ Etter prosjektet skal du kunne
 
 Dette er en linearisert undervisningsmodell omkring én trimtilstand. Parameterne er avrundede og valgt for tydelige, stabile flymoder. Modellen skal ikke brukes til design, sertifisering, flygeplanlegging eller vurdering av et virkelig luftfartøys flygeegenskaper.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -80,7 +83,10 @@ Vi bruker et lett én-motors skolefly med følgende idealiserte data:
 
 Positive løftkrefter virker oppover. Positiv motorkraft virker fremover. Vi velger positivt pitchmoment som nese opp.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 S_h = 3.8
@@ -127,7 +133,10 @@ Løs og kontroller residualet.
 Kodecelle 7 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 A_trim = np.array([
@@ -160,7 +169,10 @@ Beregn vingens og haleplanets trimkoeffisienter.
 Kodecelle 9 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 CL_v = ...
@@ -191,7 +203,10 @@ Diskuter hvorfor en matematisk løsning ikke nødvendigvis er en tillatt trimtil
 Kodecelle 11 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 def løs_trim(xw, xh, zT=z_T, drag=D_trim):
@@ -223,7 +238,10 @@ for pilot, passasjer, bagasje og drivstoff. Undersøk hvordan drivstofforbruk og
 Kodecelle 13 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 x_last = np.array([-1.2, -0.2, 0.8, 2.4])
@@ -270,7 +288,10 @@ Vi bruker dempingsforholdet
 
 $$\zeta_p=0.055.$$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 zeta_p = 0.055
@@ -311,7 +332,10 @@ $$
 Kodecelle 19 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-19
 #| echo: true
 A_p = np.array([
@@ -337,7 +361,10 @@ Simuler 600 sekunder.
 Kodecelle 21 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 def euler_system(f, x0, sluttid, dt):
@@ -399,7 +426,10 @@ $$
 
 Den er valgt slik at modellen får ett langsomt phugoidpar og ett raskere kortperiodisk par.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 A_lon = np.array([
@@ -428,7 +458,10 @@ Finn matrisens determinant, rang og egenverdier.
 Kodecelle 27 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 print("det(A) =", ...)
@@ -442,7 +475,10 @@ Vi bruker en kort høyderorspuls og et separat vertikalt vindkast.
 
 Fortegnene er pedagogiske. Et negativt høyderorsutslag gir i denne modellen en nese-opp-respons.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-29
 #| echo: true
 def høyderor_puls(t):
@@ -471,7 +507,10 @@ Identifiser:
 Kodecelle 31 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-31
 #| echo: true
 # Bruk euler_system til å simulere longitudinell_ode.
@@ -488,7 +527,10 @@ $$
 
 Beregn og plott $\Delta\alpha$ i grader. Sammenlign med pitchvinkelen.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-33
 #| echo: true
 # alpha_deg = np.rad2deg(X[:,1]/U0)
@@ -531,7 +573,10 @@ Klassifiser det langsomme paret som phugoid og det raske som kortperiodisk mode.
 Kodecelle 36 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-36
 #| echo: true
 egenverdier_lon, P_lon = np.linalg.eig(A_lon)
@@ -553,7 +598,10 @@ Undersøk de skalerte egenvektorene og vurder hvilke tilstander som dominerer:
 - phugoid: særlig fart og pitchvinkel
 - kortperiode: særlig $w$, angrepsvinkel og pitchrate
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-38
 #| echo: true
 S_x = np.diag([U0, U0, 0.2, 0.2])
@@ -575,7 +623,10 @@ Bruk en initialtilstand som inneholder både en fartforstyrrelse og en pitchrate
 Kodecelle 40 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-40
 #| echo: true
 # Kontroller først at egenvektormatrisen er inverterbar.
@@ -598,7 +649,10 @@ der
 - $\chi=1$: betydelig bakre CG
 - $\chi<0$: fremre CG
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-42
 #| echo: true
 def A_med_CG(chi):
@@ -623,7 +677,10 @@ Sammenlign med trimresultatene fra Del A. Diskuter forskjellen mellom å kunne t
 Kodecelle 44 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-44
 #| echo: true
 chi_grid = np.linspace(-0.5, 1.8, 200)
@@ -654,7 +711,10 @@ $$
 Kodecelle 46 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-46
 #| echo: true
 k_q = 0.12

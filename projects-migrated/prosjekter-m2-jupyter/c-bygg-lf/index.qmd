@@ -76,7 +76,10 @@ Bruk Eulers metode til å spore posisjon til partikkelen over tid.
 Kodecelle 4 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 
@@ -88,7 +91,10 @@ Kodecelle 4 følger en oppgavetekst og kan vurderes for `py-exercise` eller en i
 
 Koden kjøres under
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 import matplotlib.pyplot as plt
@@ -343,7 +349,10 @@ $$
 
 3. Se under, prøv forskjellige verdier.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 import numpy as np
@@ -378,7 +387,10 @@ fig, ax = plt.subplots()
 ax.plot(t,u)
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 
@@ -633,7 +645,10 @@ Vi ser at metodene er det samme hvis $\nu = \frac{h^2}{2k}$, som vil gå mot nul
 
 Viskositet utjevner sjokker. Mange numeriske metoder, inkludert Lax-Friedrichs, utjevner sjokk til en viss grad (ellers vil de bryte sammen).
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-17
 #| echo: true
 def u(x,nu):
@@ -720,7 +735,10 @@ Det er et såkelt demning-brudd problem, hvor en stor mengde vann plutselig slip
 
 Varierer ut fra hva som er blitt kjørt.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-20
 #| echo: true
 # Må dobbelsjekke koden.
@@ -842,7 +860,10 @@ Se koden under.
 Kodecelle 23 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 # Fort løsning med bruk av innebygget løser i python
@@ -897,19 +918,28 @@ res = sp.minimize(f, x0, bounds=bnds, constraints=con)
 
 
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 print(res)
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-26
 #| echo: true
 print(res.x)
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 u[0,:] = res.x
@@ -931,7 +961,10 @@ from IPython.display import HTML
 HTML(ani.to_jshtml())
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-28
 #| echo: true
 

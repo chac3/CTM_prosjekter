@@ -25,7 +25,10 @@ Vi studerer kjernedannelse under nedkjøling. Prosjektet kobler lineær algebra,
 - Undersøke massebevaring.
 - Sammenligne en makromodell og en mikromodell.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 import numpy as np
@@ -67,7 +70,10 @@ Hvilken betingelse på $A$ gir massebevaring?
 Kodecelle 8 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 m = np.array([1,2,3,4,5])
@@ -91,7 +97,10 @@ $$\begin{aligned}N_1+N_2+N_3+N_4&=1000
 Kodecelle 11 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 A_lin = np.array([[1,1,1,1],[1,2,3,4],[0,1,-1,0],[0,0,0,1]],dtype=float)
@@ -120,7 +129,10 @@ $$\dot\phi = 2kt(1-\phi).$$
 Kodecelle 15 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-15
 #| echo: true
 def f_phi(t, phi, k=0.03):
@@ -131,7 +143,10 @@ def f_phi(t, phi, k=0.03):
 Kodecelle 16 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 def euler_scalar(f, y0, T, h):
@@ -151,7 +166,10 @@ Løs Avrami-ligningen numerisk med $k=0.03$ og $\phi(0)=0$.
 Kodecelle 18 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-18
 #| echo: true
 t_phi, phi = euler_scalar(f_phi,0.0,20.0,0.1)
@@ -168,7 +186,10 @@ Avrami-modellen beskriver bare den totale transformerte andelen $\phi(t)$. Nå �
 
 # Del C: Mikromodell for størrelsesfordelingen
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 A = np.array([[-0.50,0.10,0,0,0],[0.40,-0.50,0.10,0,0],[0,0.40,-0.50,0.10,0],[0,0,0.40,-0.50,0.10],[0,0,0,0.40,-0.10]])
@@ -182,7 +203,10 @@ def f(N):
 Kodecelle 22 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-22
 #| echo: true
 def euler_system(f, y0, T, h):
@@ -202,14 +226,20 @@ Simuler systemet fra $N(0)=0$.
 Kodecelle 24 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-24
 #| echo: true
 N0=np.zeros(5)
 t,Y = euler_system(f,N0,50.0,0.05)
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 for i in range(5):
@@ -230,7 +260,10 @@ Beregn og plott $M(t)$.
 Kodecelle 27 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 M = ...
@@ -252,7 +285,10 @@ Beregn og plott $\phi_{micro}(t)$. Hva representerer denne størrelsen?
 Kodecelle 29 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-29
 #| echo: true
 phi_micro = ...
@@ -270,7 +306,10 @@ Diskuter:
 Kodecelle 31 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-31
 #| echo: true
 plt.plot(t, phi_micro, label="Mikromodell")

@@ -48,7 +48,10 @@ Etter prosjektet skal du kunne
 
 Modellene er forenklede. Vi antar blant annet uniform fluks i hver kjernedel, konstante viklingsparametre og en glatt, entydig magnetiseringskurve i hovedmodellen. Full hysterese og virvelstrømstap krever mer avanserte materialmodeller.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -116,7 +119,10 @@ $$B=\frac{\Phi}{A}.$$
 Kodecelle 5 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 N = 500
@@ -171,7 +177,10 @@ Hvorfor kan et kort luftgap dominere totalreluktansen?
 Kodecelle 7 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 mu0 = 4*np.pi*1e-7
@@ -241,7 +250,10 @@ Løs systemet for en symmetrisk kjerne med $\mathcal R_2=\mathcal R_3$, og kontr
 Kodecelle 10 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 R1 = 2.0e5
@@ -276,7 +288,10 @@ Hvilken del kan først nå et gitt metningsnivå $B_{sat}$?
 Kodecelle 12 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 R3_asym = 8.0e5
@@ -342,7 +357,10 @@ Undersøk hvordan induktansen påvirkes når
 Kodecelle 15 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-15
 #| echo: true
 N_B = 500
@@ -389,7 +407,10 @@ Bruk $V_0=5$ V, $R=10\ \Omega$ og $i_0=0$.
 Kodecelle 18 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-18
 #| echo: true
 V0 = 5.0
@@ -416,7 +437,10 @@ Sammenlign Euler-løsningen med håndløsningen.
 Kodecelle 20 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-20
 #| echo: true
 def spole_konstant(t, i):
@@ -442,7 +466,10 @@ Phi_B = ...
 B_B = ...
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 fig, ax = plt.subplots(2, 1, sharex=True)
@@ -475,7 +502,10 @@ Bruk $f=10$ Hz og velg en steglengde som gir minst 200 steg per periode. Plott $
 Kodecelle 23 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 Vmax_B = 5.0
@@ -574,7 +604,10 @@ Bruk skalerte parameterverdier som gir moderate strømmer og tydelig kobling. In
 Kodecelle 28 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-28
 #| echo: true
 N1 = 100
@@ -610,7 +643,10 @@ print("Egenverdier:", ...)
 Kodecelle 29 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-29
 #| echo: true
 def lineær_transformator(t, x):
@@ -651,7 +687,10 @@ Phi_C = ...
 B_C = ...  # bruk et valgt kjerneareal
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-30
 #| echo: true
 A_core_C = 5.0e-4
@@ -781,7 +820,10 @@ Velg parameterne slik at modellen er omtrent lineær ved små flukstettheter, me
 Kodecelle 36 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-36
 #| echo: true
 ell_core = 0.50
@@ -815,7 +857,10 @@ def mettet_transformator(t, x, fase=0.0):
     return dx
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-37
 #| echo: true
 t_D, X_D = euler_system(
@@ -874,7 +919,10 @@ Sammenlign maksimal $|i_1|$ og maksimal $|B|$ de første periodene. Hvilken komb
 Kodecelle 41 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-41
 #| echo: true
 tilfeller = [

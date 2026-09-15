@@ -85,7 +85,10 @@ Her er $D$ etterspørsel (det kan varierer med tid, men for øyeblikket antas ko
 
 Den er teknisk sett ikke en vanlig ordinær differensialligning, men heller en forsinket ODL. Men vi kan fortsett løser det mer Eulers metode, vi må bare justere koden litt (se under):
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 import numpy as np
@@ -134,7 +137,10 @@ $$
 2. Det kan bli voldsomt ja!
 3. Se under:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 def forsinkede2(D,T,TG,q0,qd,a,b,N):
@@ -198,7 +204,10 @@ $$
 
 3. Den andreordens modell er mer stabil. Er den mer realistisk? Trolig er den forsinkede ligningen å foretrekke.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 #def analytisk(T_G, T, D)
