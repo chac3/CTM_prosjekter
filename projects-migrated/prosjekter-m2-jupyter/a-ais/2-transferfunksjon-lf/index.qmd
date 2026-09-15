@@ -89,7 +89,10 @@ Dempingsraten $\zeta < 1$. Dette betyr at systemet er underdempet.
 $$H(s) = \frac{s + 2}{s^2 + 6s + 9} = \frac{1\cdot s + 2}{1\cdot s^2 + 6\cdot s + 9} $$
 
 * Konstruksjon av transferfunksjon i Python:
-```Python
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 import scipy.signal as sig
 numerator = [1, 2]
 denominator = [1, 6, 9]
@@ -109,7 +112,10 @@ Kodecelle 6 følger en oppgavetekst og kan vurderes for `py-exercise` eller en i
 Kodecelle 6 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 # LØSNING!

@@ -45,7 +45,10 @@ Etter prosjektet skal du kunne
 
 Den opprinnelige inspirasjonen var en komposittmodell med celleinteriører og cellevegger, der kryssglidning og dislokasjonsklatring gir ulike gjenopprettingsmekanismer. Den modellen er for omfattende for Matematikk 1. Her bruker vi i stedet en minimal modell som beholder de viktigste ideene: orienteringsavhengig slip, en kinetisk flytlov og utvikling av materialets motstand mot videre slip.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -106,7 +109,10 @@ Deretter kan du prøve den primitive FCC-basis som er gitt i kodecellen.
 Kodecelle 5 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 a = 1.0
@@ -156,7 +162,10 @@ Undersøk også retningen $[110]$. Ligger den i planet $(111)$?
 Kodecelle 8 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 def normal_fra_miller(hkl, B_dual):
@@ -217,7 +226,10 @@ $$Q^TQ=I,\qquad \det Q=1.$$
 Kodecelle 11 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 theta = np.deg2rad(25.0)
@@ -268,7 +280,10 @@ De to beregningene skal gi samme svar.
 Kodecelle 13 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 sigma0 = 100.0  # MPa
@@ -406,7 +421,10 @@ Fullfør modellen og Eulers metode. Beregn $\gamma(t)$, $\tau(t)$ og $g(t)$.
 Kodecelle 19 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-19
 #| echo: true
 mu = 80.0
@@ -446,7 +464,10 @@ tau_B = ...
 g_B = ...
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-20
 #| echo: true
 fig, ax = plt.subplots(2, 1, sharex=True)
@@ -551,7 +572,10 @@ Dette er en matematisk måte å undersøke om modellen kan gi negative hardnings
 Kodecelle 24 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-24
 #| echo: true
 H = 12.0
@@ -585,7 +609,10 @@ slik at system 1 er gunstigere orientert enn system 2.
 Kodecelle 26 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-26
 #| echo: true
 mu = 80.0
@@ -645,7 +672,10 @@ tau1_C = ...
 tau2_C = ...
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 fig, ax = plt.subplots(3, 1, sharex=True, figsize=(7, 9))
@@ -683,7 +713,10 @@ plt.show()
 Kodecelle 29 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-29
 #| echo: true
 # Beregn slipphastighetene langs den ferdige løsningen.

@@ -33,7 +33,10 @@ Etter prosjektet skal du kunne
 - implementere Eulers metode for et ODE-system,
 - vurdere forutsetninger og begrensninger i en matematisk modell.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -62,7 +65,10 @@ $$S\begin{pmatrix}a\\b\\c\end{pmatrix}=0.$$
 Kodecelle 4 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 # Fyll inn den støkiometriske matrisen.
@@ -84,7 +90,10 @@ Kontroller til slutt at koeffisientvektoren ligger i nullrommet til $S$ ved å b
 Kodecelle 6 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 # Lag et kvadratisk system ved å legge til betingelsen c = 2.
@@ -121,7 +130,10 @@ I resten av prosjektet lar vi $R(t)$ være en skalert rusttykkelse. Konstanten $
 Kodecelle 8 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 M_Fe = 55.845
@@ -208,7 +220,10 @@ Implementer Eulers metode for systemet og sammenlign den numeriske løsningen me
 Kodecelle 13 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 alpha = 0.30
@@ -236,7 +251,10 @@ def euler_system(f, x0, T, h):
     return t, X
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 t_B, X_B = euler_system(
@@ -263,7 +281,10 @@ Skriv inn håndløsningen som Python-funksjoner. Plott eksakt og numerisk løsni
 Kodecelle 16 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 def C_eksakt(t):
@@ -325,7 +346,10 @@ $$Ay^*+b=0.$$
 Kodecelle 19 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-19
 #| echo: true
 alpha = 0.30
@@ -364,7 +388,10 @@ Bruk diagonalisering til å beskrive den analytiske løsningen for oksygenkonsen
 Kodecelle 21 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 egenverdier, P = np.linalg.eig(A)
@@ -389,7 +416,10 @@ Sammenlign $C_W(t)$ og $C_R(t)$. Forklar hvorfor konsentrasjonen nær stålet va
 Kodecelle 23 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 def modell_to_lag(x):
@@ -437,7 +467,10 @@ Beregn og plott $J_{reaksjon}(t)$.
 Kodecelle 25 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 J_reaksjon = ...
@@ -465,7 +498,10 @@ Sammenlign rusttykkelsen etter en fast tid. Vær forsiktig med tolkningen: param
 Kodecelle 27 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 scenarier = {

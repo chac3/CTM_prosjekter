@@ -141,7 +141,10 @@ $$
 Kodecelle 7 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 import numpy as np
@@ -168,7 +171,10 @@ $$
 
 dvs det er (nesten) bare normal spenning i et tversnitt med vinkel $30^\circ$ mot $x$-aksen.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 

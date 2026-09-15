@@ -24,7 +24,10 @@ På hver pil kan vi legge et tall som vi kaller vekten til pilen. Hvis et nettve
 
 Vi bruker numpy for matematiske beregninger.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 import numpy as np
@@ -46,7 +49,10 @@ Vi tillater ikke løkker i nettverket vårt. Det betyr at tallene på diagonalen
 
 I programmet under så har vi et nettverk og en matrise. De inneholder akkurat samme informasjon. Pass på at du forstår hvordan dette henger sammen før du går videre.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 N = [(0, 1, 2.0), (1, 0, 3.0), (0, 2, 4.0), (2,0,5.0)]
@@ -69,7 +75,10 @@ Test funksjonene og forsikre deg om at alt er riktig før du går videre.
 Kodecelle 7 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 def tilMatrise(antallNoder, nettverk):
@@ -85,7 +94,10 @@ Vi bygger litt videre på ideen fra den første forelesningen og legger nettverk
 
 Pass på at alt virker før du går videre.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 class Nettverk:
@@ -139,7 +151,10 @@ Bonus: Du kan også prøve å gjøre "fraMatrise" mer brukervennlig ved å skriv
 Kodecelle 11 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 class Nettverk:
@@ -167,7 +182,10 @@ class Nettverk:
         pass
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 #
@@ -202,7 +220,10 @@ Både initialverdier og randbetingelser er nyttige når vi analyserer nettverk. 
 
 Vi skal løse systemet $y' = y\cdot A$ numerisk med Eulers metode.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 #
@@ -234,7 +255,10 @@ Når du er ferdig så kan du teste ved å se om koden under gi akkurat samme res
 Kodecelle 16 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 class Nettverk:
@@ -265,7 +289,10 @@ class Nettverk:
         pass
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-17
 #| echo: true
 #
@@ -343,7 +370,10 @@ d) Hvilken av disse sidene er mest populær?
 Kodecelle 19 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-19
 #| echo: true
 #
@@ -353,7 +383,10 @@ H = np.ones(shape=(6,6)) - 6.0*np.eye(6)
 print(H)
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-20
 #| echo: true
 #
@@ -361,19 +394,28 @@ print(H)
 #
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-22
 #| echo: true
 
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 

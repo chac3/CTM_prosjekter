@@ -25,7 +25,10 @@ Med andre ord betyr dette at sinusspenninger kun vil endre seg i amplitude og fa
 I denne oppgaven skal vi bruke Python til å kjøre noen simuleringer av RLC-retsen med sinusbølger $v_0(t) = A\cdot \sin(\omega \cdot t)$ som påtrykt spenningssignal, og analysere den kondensatorspenningen $v_C(t)$ som oppstår over tid. En sentral komponent i denne oppgaven vil være funksjonen [`scipy.signal.lsim`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.lsim.html#scipy.signal.lsim) som vi kan bruke til å simulere RLC-kretsens oppførsel med hvilken som helst funksjon for påtrykt spenning $v_0(t)$.
 
 Eksempel på bruk:
-```Python
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 import numpy as np
 import scipy.signal as sig
 
@@ -49,7 +52,10 @@ _, v_ut, _ = sig.lsim(system, U=v_inn, T=t)   # Beregn utgangsspenningen 'v_ut' 
 Kodecelle 4 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 
@@ -63,7 +69,10 @@ Kodecelle 4 følger en oppgavetekst og kan vurderes for `py-exercise` eller en i
 Kodecelle 6 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 
@@ -78,7 +87,10 @@ Kodecelle 6 følger en oppgavetekst og kan vurderes for `py-exercise` eller en i
 Kodecelle 8 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 
@@ -94,7 +106,10 @@ Kodecelle 8 følger en oppgavetekst og kan vurderes for `py-exercise` eller en i
 Kodecelle 10 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 

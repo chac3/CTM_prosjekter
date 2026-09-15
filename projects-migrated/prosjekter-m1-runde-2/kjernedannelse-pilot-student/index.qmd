@@ -26,7 +26,10 @@ I dette prosjektet studerer vi en forenklet modell for kjernedannelse under nedk
 - Undersøke massebevaring i en modell.
 - Sammenligne en makroskopisk og en mikroskopisk modell for faseomvandling.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 import numpy as np
@@ -77,7 +80,10 @@ Hva må gjelde dersom modellen skal bevare total masse?
 Kodecelle 8 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 m = np.array([1,2,3,4,5])
@@ -112,7 +118,10 @@ N_1+2N_2+3N_3+4N_4&=1800
 Kodecelle 11 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 A_lin = np.array([
@@ -150,7 +159,10 @@ $$\dot\phi = 2kt(1-\phi).$$
 Kodecelle 15 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-15
 #| echo: true
 def f_phi(t, phi, k=0.03):
@@ -161,7 +173,10 @@ def f_phi(t, phi, k=0.03):
 Kodecelle 16 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 def euler_scalar(f, y0, T, h):
@@ -184,7 +199,10 @@ Løs Avrami-ligningen numerisk med $k=0.03$ og $\phi(0)=0$.
 Kodecelle 18 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-18
 #| echo: true
 t, phi = euler_scalar(f_phi, 0.0, 20.0, 0.1)
@@ -200,7 +218,10 @@ plt.show()
 
 Vi betrakter nå størrelsesfordelingen direkte. Nye kjerner dannes i klasse 1, og kjerner kan flyttes mellom naboklasser.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-20
 #| echo: true
 A = np.array([
@@ -214,7 +235,10 @@ A = np.array([
 b = np.array([10,0,0,0,0], dtype=float)
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 def f(N):
@@ -225,7 +249,10 @@ def f(N):
 Kodecelle 22 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-22
 #| echo: true
 def euler_system(f, y0, T, h):
@@ -248,14 +275,20 @@ Implementer Euler-metoden og simuler modellen fra startverdien $N(0)=0$.
 Kodecelle 24 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-24
 #| echo: true
 N0 = np.zeros(5)
 t, Y = euler_system(f, N0, 50.0, 0.05)
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 for i in range(5):
@@ -280,7 +313,10 @@ Lag et plott av $M(t)$.
 Kodecelle 27 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 M = ...

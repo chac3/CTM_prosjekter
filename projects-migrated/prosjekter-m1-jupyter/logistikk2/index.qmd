@@ -85,7 +85,10 @@ Her er $D$ etterspørsel (det kan varierer med tid, men for øyeblikket antas ko
 
 Den er teknisk sett ikke en vanlig ordinær differensialligning, men heller en forsinket ODL. Men vi kan fortsett løse det med Eulers metode, vi må bare justere koden litt (se under):
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 import numpy as np
@@ -148,7 +151,10 @@ Her er $T, T_G, q_D$ som før, mens vi antar at $d=0$.
 Kodecelle 7 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 def analytisk(t):

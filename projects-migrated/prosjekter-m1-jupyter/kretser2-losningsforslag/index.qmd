@@ -49,7 +49,10 @@ $$\frac{dV}{dt} = \frac{2}{3kR} (-V^\frac{1}{2} + V_s V^{-\frac{1}{2}})$$
 
 Vi løser ligningen i kodefeltet under, og sammenligner resultatet med en lineær kondensator.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -94,7 +97,10 @@ Koden over sammenligner en lineær og en ikke-lineær kondensator.
 1. $k=1, R=1, V_0=10$
 2. Se under
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 import numpy as np
@@ -145,7 +151,10 @@ Sammenlign kretsen for en lineære spoler med en ikke-lineær med $L(I)=k\frac{1
 Kodecelle 7 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 def L1(x,t):
@@ -215,7 +224,10 @@ I
 \end{pmatrix}
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 

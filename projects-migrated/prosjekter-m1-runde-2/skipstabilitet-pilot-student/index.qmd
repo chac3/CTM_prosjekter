@@ -43,7 +43,10 @@ Etter prosjektet skal du kunne
 
 Modellen er laget for undervisning. Den kan ikke brukes som dokumentasjon av sikkerhet, klassing eller forskriftsmessig stabilitet for et virkelig fartøy. Reelle stabilitetsberegninger krever detaljert skroggeometri, lastetilstander, fribord, vanntette grenser, fri væskeoverflate, skadeforhold og gjeldende maritime krav.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -114,7 +117,10 @@ Beregn samlet masse og tyngdepunkt.
 Kodecelle 6 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 komponenter = [
@@ -175,7 +181,10 @@ Sett opp $Ax=b$ og løs systemet. Kontroller residualet og at ingen tank får ne
 Kodecelle 9 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 y_tank = np.array([-5.0, 0.0, 4.0])
@@ -212,7 +221,10 @@ Endre $z_B$ og undersøk når systemet begynner å gi negative ballastmasser.
 Kodecelle 11 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 kapasitet = np.array([80.0, 100.0, 90.0])
@@ -230,7 +242,10 @@ Ballasttankene antas å ligge ved samme langskipsposisjon $x=25$ m. Kombiner bal
 Kodecelle 13 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 x_ballast = 25.0
@@ -286,7 +301,10 @@ Beregn $KB$, $BM$, $KM$ og $GM$ før og etter ballast. Kommenter virkningen av b
 Kodecelle 16 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 L_skip = 60.0
@@ -325,7 +343,10 @@ Forklar hvorfor en stor positiv $GM$ gir sterk initial stabilitet, men ikke nød
 Kodecelle 18 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-18
 #| echo: true
 bredder = np.linspace(8.0, 18.0, 100)
@@ -407,7 +428,10 @@ Finn den analytiske løsningen for hånd og beregn naturlig periode og dempnings
 Kodecelle 23 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 I_phi = 1.8e8
@@ -447,7 +471,10 @@ Bestem $C_1,C_2$ fra begynnelsesbetingelsene og plott vinkelen i grader.
 Kodecelle 25 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 t = np.linspace(0.0, 60.0, 2000)
@@ -489,7 +516,10 @@ Kodecelle 27 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, 
 Kodecelle 27 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 def lineær_rulling(t, x):
@@ -541,7 +571,10 @@ $$A=PDP^{-1}.$$
 Kodecelle 29 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-29
 #| echo: true
 A_roll = np.array([
@@ -613,7 +646,10 @@ $$5^\circ,\quad20^\circ,\quad45^\circ.$$
 Kodecelle 33 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-33
 #| echo: true
 def GZ_sinus(phi):
@@ -668,7 +704,10 @@ Finn numerisk
 Kodecelle 36 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-36
 #| echo: true
 phi_v = np.deg2rad(75.0)
@@ -697,7 +736,10 @@ Dette er et numerisk og pedagogisk stoppkriterium, ikke en universell kapseising
 Kodecelle 38 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-38
 #| echo: true
 def euler_med_stopp(f, x0, T, h, phi_stopp):
@@ -750,7 +792,10 @@ Sammenlign maksimal krengningsvinkel etter at den første transienten har avtatt
 Kodecelle 41 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-41
 #| echo: true
 M0 = 2.0e6
@@ -791,7 +836,10 @@ Simuler modellen med et lite konstant $M_H$ og sammenlign den numeriske likevekt
 Kodecelle 43 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-43
 #| echo: true
 y_G_forskyvning = 0.10

@@ -144,7 +144,10 @@ i Python.
 
 Vi lager matrisen $L$. Det viser seg å være forbausende lett!
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 import numpy as np
@@ -164,7 +167,10 @@ print(L)
 
 Vi kunne imidlertid også ha satt opp matrisen med en for-løkke:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 # initialiserer matrisen
@@ -226,7 +232,10 @@ $$
 
 Hvis $f(x)$ ikke er $0$, må vi først beregne $\vec{F} = f(x)$. Vi legger en kommentar i koden under for å vise hvordan dette kan gjøre i praksis.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 import numpy.linalg as la
@@ -268,7 +277,10 @@ $$
 
 Vi løser dette numerisk.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 import numpy as np

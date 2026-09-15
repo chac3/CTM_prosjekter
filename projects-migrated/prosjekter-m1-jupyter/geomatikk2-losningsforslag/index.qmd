@@ -60,7 +60,10 @@ $$
 
 som er en paramtrisering av en kjeglesnitt med eksentrisitet $e=Al$ og "semi latus rectum" $l=\frac{h^2}{GM}$. Noen eksempler er tegnet under
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 import numpy as np
@@ -81,7 +84,10 @@ ax3.plot(theta, r(theta2, 1.2, 2))
 # Man kan få rare resultater på hyperbolaer hvis man bruker theta som parameter, se 3. graf
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 

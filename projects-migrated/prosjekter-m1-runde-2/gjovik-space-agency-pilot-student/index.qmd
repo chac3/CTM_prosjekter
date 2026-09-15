@@ -63,7 +63,10 @@ Etter prosjektet skal du kunne
 
 Modellen er deterministisk og bruker kontinuerlige gjennomsnittsstrømmer. Virkelige oppskytninger er diskrete, transporttidene varierer, og romfartøy har mange flere masse-, sikkerhets- og banebegrensninger. Rommekanikken er idealisert og skal brukes til å bestemme pedagogiske ledetider og kapasiteter, ikke til oppdragsplanlegging.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -93,7 +96,10 @@ $$
 
 Tallene er scenarioverdier valgt for å gi et tydelig matematisk prosjekt.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 vare_navn = ["forbruksvarer", "reservedeler", "teknisk last"]
@@ -126,7 +132,10 @@ $$
 \eta_L=0.96.
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 eta = np.array([0.98, 0.94, 0.97, 0.96])
@@ -176,7 +185,10 @@ Bygg $A_\mu$ og løs systemet. Kontroller residualet.
 Kodecelle 9 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 d_total = np.sum(behov_base)
@@ -210,7 +222,10 @@ slik at hver kolonne i $M_\mu$ gir aktivitetsratene for én varegruppe.
 Kodecelle 11 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 B_varer = np.zeros((4, 3))
@@ -233,7 +248,10 @@ $$
 
 Den kontinuerlige modellen gir et minimumstall, men den virkelige frekvensen må være et helt antall oppdrag.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 nyttelast_per_oppdrag = 6200.0  # kg
@@ -260,7 +278,10 @@ Beregn kapasitetsutnyttelsen i alle ledd. Hva er flaskehalsen? Hva skjer dersom 
 Kodecelle 15 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-15
 #| echo: true
 kapasitet_årlig = np.array([
@@ -293,7 +314,10 @@ $$
 
 $T$ representerer samlet treghet i planlegging, klargjøring, transport og lossing.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-17
 #| echo: true
 d_kritisk = behov_base[0]  # kg/døgn
@@ -325,7 +349,10 @@ $$
 Kodecelle 19 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-19
 #| echo: true
 A_2 = np.array([
@@ -348,7 +375,10 @@ Denne modellen bruker fortsatt én responsrate, ikke en eksplisitt tidsforsinkel
 Kodecelle 21 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 def lager_ode(t_døgn, x):
@@ -385,7 +415,10 @@ Rapporter minste lager, største leveringsrate og tiden til lageret er tilbake i
 Kodecelle 23 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 x0_B = np.array([q_stjerne, d_kritisk])
@@ -439,7 +472,10 @@ $$
 
 Den siste lagerbalansen får i tillegg baseforbruket $-d$.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-26
 #| echo: true
 eta_O = eta[1]
@@ -468,7 +504,10 @@ $$
 Kodecelle 28 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-28
 #| echo: true
 print("Likevektsresidual:", ...)
@@ -491,7 +530,10 @@ $$
 
 Her er $T$ diagonal og inneholder responstidene.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-30
 #| echo: true
 q_stjerne_kjede = np.array([
@@ -523,7 +565,10 @@ I referansescenarioet:
 - månelanderen er under vedlikehold fra døgn 125 til 135
 - de andre leddene er tilgjengelige
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-32
 #| echo: true
 def tilgjengelighet(t_døgn):
@@ -561,7 +606,10 @@ Bruk `np.linalg.solve` på responstidsmatrisen $T$. Start i likevekt og simuler 
 Kodecelle 35 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-35
 #| echo: true
 def kjede_ode(t_døgn, X):
@@ -625,7 +673,10 @@ $$
 \boxed{t_H=\pi\sqrt{\frac{a_t^3}{\mu_E}}.}
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-38
 #| echo: true
 mu_E = 3.986004418e14  # m^3/s^2
@@ -642,7 +693,10 @@ Beregn $\Delta v_1$, $\Delta v_2$, total $\Delta v$ og overføringstid.
 Kodecelle 40 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-40
 #| echo: true
 a_transfer = ...
@@ -679,7 +733,10 @@ Fartøyet har:
 
 Vi ser bort fra andre manøvrer i hovedberegningen.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-42
 #| echo: true
 m0_maks = 18000.0
@@ -699,7 +756,10 @@ Sammenlign med den oppgitte logistikkapasiteten på 6200 kg per oppdrag. Hva kan
 Kodecelle 44 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-44
 #| echo: true
 delta_v_dim = reservefaktor*delta_v_H
@@ -772,7 +832,10 @@ Bruk blokkmatriser og kontroller at $\mathcal A$ er $8\times8$.
 Kodecelle 48 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-48
 #| echo: true
 T_inv = np.linalg.inv(T_kjede)
@@ -805,7 +868,10 @@ Merk at lagerstørrelsen påvirker robustheten direkte, mens egenverdiene i denn
 Kodecelle 50 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-50
 #| echo: true
 egenverdier, egenvektorer = ...
@@ -825,7 +891,10 @@ $$X=Pz.$$
 
 Sammenlign direkte Euler-simulering med en modal simulering for en liten lagerforstyrrelse.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-52
 #| echo: true
 # Kontroller diagonaliserbarhet og implementer modal simulering.

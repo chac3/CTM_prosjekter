@@ -49,7 +49,10 @@ Etter prosjektet skal du kunne
 
 Den hydrauliske rørmodellen er lineær og kan tolkes som en lokal linearisering rundt et driftspunkt. Trykktransientene er samlet i noen få trykknoder og er ikke en vannhammermodell med bølgeforplantning. SCC-loven er en pedagogisk terskelmodell. Den skal ikke brukes til dimensjonering, levetidsfastsettelse eller sikkerhetsvurdering av virkelige rør.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -91,7 +94,10 @@ $$
 
 $h$ måles i meter vannsøyle og $q$ i $83{m^3/s}$.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 node_navn = ["reservoar", "sone A", "sone B", "sone C"]
@@ -143,7 +149,10 @@ Forklar hvorfor alle trykkhøyder kan økes med samme konstant uten å endre rø
 Kodecelle 7 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 B = np.array([
@@ -188,7 +197,10 @@ Bruk de tre siste radene og kolonnene i $K_{full}$. Høyresiden for de ukjente n
 Kodecelle 10 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 K_uu = K_full[1:, 1:]
@@ -218,7 +230,10 @@ $$B^Tq.$$
 Kodecelle 12 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 q_rør = ...
@@ -262,7 +277,10 @@ For hvert tilfelle, rapporter laveste trykkhøyde og endringen i rørstrømmene.
 Kodecelle 15 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-15
 #| echo: true
 lekkasje = np.array([0.0, 4.0e-5, 0.0])
@@ -283,7 +301,10 @@ $$
 
 Her er $C_h$ en hydraulisk kapasitet med enhet $83{m^2}$ i denne aggregerte modellen.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-17
 #| echo: true
 C_h = 0.025
@@ -308,7 +329,10 @@ Løs også ligningen analytisk for startverdien $h(0)=30$ m.
 Kodecelle 19 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-19
 #| echo: true
 a_tank = ...
@@ -332,7 +356,10 @@ Sammenlign flere tidssteg. Undersøk hva som skjer dersom forbruket dobles bråt
 Kodecelle 21 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 def euler_skalar(f, y0, sluttid, dt):
@@ -377,7 +404,10 @@ Den stasjonære løsningen er den samme som i del A.
 Kodecelle 23 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 C_node = np.diag([0.035, 0.025, 0.030])
@@ -411,7 +441,10 @@ Start i den stasjonære normaltilstanden. Simuler 30 sekunder og plott alle tre 
 Kodecelle 25 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 def euler_system(f, x0, sluttid, dt):
@@ -460,7 +493,10 @@ $$
 
 $g$ kobler nabosonene, mens $g_0$ kobler hver sone til et referansesystem eller representerer lineær last/lekkasje.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-28
 #| echo: true
 C0 = 0.030
@@ -490,7 +526,10 @@ Tolk modene som
 Kodecelle 30 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-30
 #| echo: true
 egenverdier_K, P = ...
@@ -535,7 +574,10 @@ $$
 Kodecelle 33 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-33
 #| echo: true
 tau = ...
@@ -576,7 +618,10 @@ $$
 
 $K_{\sigma}$ er her en pedagogisk lokal faktor, ikke en komplett spenningsanalyse av et bend eller en sveis.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-35
 #| echo: true
 komponent_navn = ["rett rør", "bend", "sveis"]
@@ -602,7 +647,10 @@ Beregn trykk og lokal spenning ved normalt driftspunkt. Sammenlign rangeringen m
 Kodecelle 37 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-37
 #| echo: true
 p_drift = ...
@@ -627,7 +675,10 @@ $Y$ er en geometriparameter. Denne enkle formelen samler ikke alle effekter av v
 Kodecelle 39 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-39
 #| echo: true
 a0 = np.array([0.20e-3, 0.20e-3, 0.20e-3])  # m
@@ -651,7 +702,10 @@ I kode skalerer vi $K_I$ til MPa$\sqrt{\mathrm m}$ for å få håndterlige param
 
 Parameterne er valgt for undervisningsformål og representerer ikke et bestemt materiale eller vannsystem.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-41
 #| echo: true
 K_ISCC = np.array([18.0, 18.0, 18.0])  # MPa sqrt(m)
@@ -684,7 +738,10 @@ Plott sprekkdybden som andel av veggtykkelsen. Hvilken komponent blir kritisk f�
 Kodecelle 43 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-43
 #| echo: true
 def euler_scc(f, a_start, sluttid, dt):

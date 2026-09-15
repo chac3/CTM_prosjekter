@@ -71,7 +71,10 @@ $$
 \frac{\partial \rho}{\partial t} + a\frac{\partial \rho}{\partial x} = 0.
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 
@@ -121,7 +124,10 @@ $$
 \rho(x,t) = \frac{1}{1+(x-2t)^2}
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 import matplotlib.pyplot as plt
@@ -339,7 +345,10 @@ Vi ser at metodene er det samme hvis $\nu = \frac{h^2}{2k}$, som vil gå mot nul
 
 Viskositet utjevner sjokker. Mange numeriske metoder, inkludert Lax-Friedrichs, utjevner sjokk til en viss grad (ellers vil de bryte sammen).
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 def u(x,nu):
@@ -415,7 +424,10 @@ som plottes under
 
 Det er flyte forbi en sirkulær gjenstand.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 x = np.linspace(-2, 2, 6)
@@ -477,7 +489,10 @@ Hva kan du si om forholdet mellom $a,b$ og størrelsen på åpningene?
 
 Er under
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-17
 #| echo: true
 import numpy as np
@@ -635,7 +650,10 @@ og
 
 under:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-19
 #| echo: true
 # Streamlines
@@ -715,7 +733,10 @@ Kommenter resultatene. Ser de ut som bølger?
 
 Se kode under
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-24
 #| echo: true
 g = 10
@@ -738,7 +759,10 @@ plt.plot(xx, gs(xx,2))
 
 Se under
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-26
 #| echo: true
 K1 = sp.kron(g3(x),Nn_l) 
@@ -781,7 +805,10 @@ Se under
 
 Virker rimelig til meg!
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-28
 #| echo: true
 # Streamlines
@@ -832,7 +859,10 @@ $$
 Kodecelle 30 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-30
 #| echo: true
 

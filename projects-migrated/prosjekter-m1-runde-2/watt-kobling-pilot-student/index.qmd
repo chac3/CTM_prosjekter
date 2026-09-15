@@ -49,7 +49,10 @@ Etter prosjektet skal du kunne
 
 Modellen beskriver idealiserte, plane og stive stenger med perfekte dreieledd. Krefter, friksjon, slark, elastisitet og kollisjoner er utelatt i hovedmodellen.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -90,7 +93,10 @@ $$
 Kodecelle 5 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 def rotasjon(theta):
@@ -141,7 +147,10 @@ Bruk $L_1=1.5$, $L_2=1.0$, $\theta_1=35^\circ$ og $\theta_2=-70^\circ$. Beregn l
 Kodecelle 8 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 L1 = 1.5
@@ -238,7 +247,10 @@ Funksjonen skal returnere to punkter. Dersom sirklene ikke skjærer hverandre, s
 Kodecelle 12 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 def sirkel_skjæring(S0, r0, S1, r1):
@@ -272,7 +284,10 @@ To sirkler gir vanligvis to mulige punkter $C$. De svarer til to ulike montering
 
 I hovedoppgaven velger vi først punktet med størst $y$-koordinat. Når vi følger en hel bevegelse, velger vi deretter det punktet som ligger nærmest forrige verdi av $C$. Da unngår vi at mekanismen hopper uventet mellom de to grenene.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 d = 2.0
@@ -313,7 +328,10 @@ $$\|B-A\|=L,\qquad \|C-D\|=L,\qquad \|C-B\|=\ell.$$
 Kodecelle 16 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 theta_test = np.deg2rad(80.0)
@@ -342,7 +360,10 @@ Vi lar inngangsvinkelen variere gjennom et valgt intervall. For hvert vinkelpunk
 
 Ikke alle vinkler gir en mulig montering. Slike punkter hoppes over.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-18
 #| echo: true
 theta_verdier = np.deg2rad(np.linspace(35.0, 145.0, 401))
@@ -384,7 +405,10 @@ Bare en del av kurven er omtrent rett. Velg et sammenhengende vinkelintervall ru
 
 I pilotverdiene kan du begynne med et intervall rundt midten av den beregnede banen. Senere kan intervallet justeres.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-20
 #| echo: true
 # Eksempel: sentrale 45 prosent av de beregnede punktene.
@@ -432,7 +456,10 @@ Beregn $S$, egenverdier og egenvektorer. Sorter egenvektorene etter stigende ege
 Kodecelle 23 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 P_middel = ...
@@ -477,7 +504,10 @@ Slaglengden langs linjen kan beregnes ved å projisere punktene på hovedretning
 Kodecelle 25 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 sideavvik = ...
@@ -493,7 +523,10 @@ print("Slaglengde:", slaglengde)
 print("Relativ maksimal feil:", E_maks/slaglengde)
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-26
 #| echo: true
 s_min = np.min(langskoordinat)
@@ -571,7 +604,10 @@ Undersøk om farten er omtrent konstant langs den rette delen.
 Kodecelle 30 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-30
 #| echo: true
 Omega_inn = 1.0
@@ -607,7 +643,10 @@ Den normale komponenten måler hvor raskt punktet beveger seg sideveis bort fra 
 Kodecelle 32 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-32
 #| echo: true
 v_langs = ...
@@ -667,7 +706,10 @@ Undersøk hva som skjer med løsningen når $|\det J|$ blir liten. Dette kalles 
 Kodecelle 35 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-35
 #| echo: true
 theta_J = np.deg2rad(70.0)
@@ -718,7 +760,10 @@ Bruk et konstant motormoment i en begrenset tidsperiode og deretter null moment.
 Kodecelle 38 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-38
 #| echo: true
 J_m = 0.20

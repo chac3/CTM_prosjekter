@@ -46,7 +46,10 @@ Etter prosjektet skal du kunne
 
 Dette er en pedagogisk grå-diffus overflatemodell. Luftens deltakelse i strålingen, speilrefleksjon, solstråling gjennom glasset, temperaturvariasjon innen hver flate og detaljert varmestrøm i konstruksjonene er utelatt i hovedmodellen.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -84,7 +87,10 @@ $$
 
 Her representerer $S$ de to identiske sideveggene.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 L_rom = 5.0
@@ -138,7 +144,10 @@ For det rektangulære rommet trenger vi i hovedsak
 
 I denne første piloten gis to ferdige hjelpefunksjoner. Studentene skal forstå hvilke dimensjoner som settes inn og kontrollere resultatene, men trenger ikke utlede de lukkede formlene fra dobbeltintegralet.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 def F_parallel_like(a, b, avstand):
@@ -196,7 +205,10 @@ Kontroller at alle ligger mellom 0 og 1. Forklar hvilken dimensjon som skal bruk
 Kodecelle 9 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 F_GT = ...
@@ -243,7 +255,10 @@ Noen av disse er geometrisk like. Bruk symmetrien før du regner alt på nytt.
 Kodecelle 12 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 F_G_L = ...
@@ -299,7 +314,10 @@ I den reduserte modellen må du bruke det samlede sideveggarealet $A_S=2A_{L_v}$
 Kodecelle 15 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-15
 #| echo: true
 F = np.zeros((5, 5))
@@ -347,7 +365,10 @@ Skriv ut største avvik. Dersom kontrollene ikke holder, undersøk om en faktor 
 Kodecelle 17 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-17
 #| echo: true
 radsummer = ...
@@ -413,7 +434,10 @@ Pilotverdiene er:
 
 Emissivitetene gis som modellparametre.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 T_C = np.array([24.0, 21.0, 21.0, 21.0, 12.0])
@@ -451,7 +475,10 @@ $$Q_i=A_iq_i''.$$
 Kodecelle 23 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 J_direkte = ...
@@ -514,7 +541,10 @@ Kodecelle 27 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, 
 Kodecelle 27 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 J0 = E_emit.copy()
@@ -549,7 +579,10 @@ Kodecelle 29 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, 
 Kodecelle 29 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-29
 #| echo: true
 antall = 25
@@ -602,7 +635,10 @@ Kodecelle 31 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, 
 Kodecelle 31 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-31
 #| echo: true
 def radiositet_iterativ(F, emissivitet, temperatur_K,
@@ -643,7 +679,10 @@ hvor $\rho(B)$ er største absoluttverdi av egenverdiene.
 
 Dette er en bro til emnet i numeriske metoder og trenger ikke inngå i vurderingen i Matematikk 1.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-33
 #| echo: true
 B_iter = Rho @ F
@@ -724,7 +763,10 @@ Fortegnet til $Q_{rad,i}$ er positivt når flate $i$ avgir netto strålingsvarme
 
 Dette er en pedagogisk modell, ikke en full bygningssimulator.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-37
 #| echo: true
 # Termiske parametre
@@ -767,7 +809,10 @@ Funksjonen skal ta fem overflatetemperaturer i Kelvin og returnere
 Kodecelle 39 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-39
 #| echo: true
 def løs_radiositet(T_overflate_K, F=F, emissivitet=emissivitet):
@@ -790,7 +835,10 @@ $$
 (T_G,T_T,T_S,T_B,T_V).
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-41
 #| echo: true
 def temperatur_ode(t, x):
@@ -844,7 +892,10 @@ Bruk først ett minutts tidssteg og kontroller deretter med et mindre steg.
 Kodecelle 43 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-43
 #| echo: true
 def euler_system(f, x0, sluttid, h):
@@ -889,7 +940,10 @@ Beregn radiositet og netto strålingsvarme for hvert lagret tidspunkt. Plott sæ
 Kodecelle 45 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-45
 #| echo: true
 Q_rad_historikk = []

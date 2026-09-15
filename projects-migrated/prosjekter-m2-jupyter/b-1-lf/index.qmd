@@ -207,7 +207,10 @@ $$
 
 2. Se under
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 import scipy.sparse as sp
@@ -254,7 +257,10 @@ $$
 
 4. Se under
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 m=4
@@ -319,7 +325,10 @@ Velg enten forlengs Euler (med passende tidslengde) eller baklengs Euler.
 
 Se under
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 import matplotlib.pyplot as plt
@@ -369,7 +378,10 @@ Se under.
 
 Legg merke til at vi går ikke mot likevekt, siden den ikke eksisterer - den tilsvarende Poissonligning har ingen løsninger.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 m=50
@@ -441,7 +453,10 @@ Kodecelle 19 følger en oppgavetekst og kan vurderes for `py-exercise` eller en 
 Kodecelle 19 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-19
 #| echo: true
 m=100
@@ -553,7 +568,10 @@ Alpha vil variere etter hva som er valgt. Har bare tatt alpha=1 her, det endres 
 Kodecelle 22 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-22
 #| echo: true
 import matplotlib.animation as animation
@@ -678,7 +696,10 @@ Har ikke valgt verdier av alpha her, annet enn $\alpha=1$ på innsiden, og $\alp
 Kodecelle 26 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-26
 #| echo: true
 import matplotlib.animation as animation
@@ -795,7 +816,10 @@ ani = animation.ArtistAnimation(fig, ims, interval=50, blit=True,
 HTML(ani.to_jshtml())
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 
@@ -867,7 +891,10 @@ Det kommer begrensinger på både løsning av systemet og kondisjonering av syst
 
 På min laptop får jeg ned til cirka $10^{-5}$ i $L^{\inf}$ med å bruke den vanlig sparse lineært system løser.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-30
 #| echo: true
 

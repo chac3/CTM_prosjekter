@@ -29,7 +29,10 @@ Vi ser fra informasjonen om bildet at det er 500 x 375 piksler stort. Matrisen v
 
 Velg en av fargekanalene og legg dataene i en 375x500 nparray.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 # Laster inn bildet image001.png
@@ -100,7 +103,10 @@ blir løst på en rimelig god måte. Hvordan synes dere algoritmen fungerer på 
 Kodecelle 4 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 # Oppgave 1
@@ -158,7 +164,10 @@ hvor fluksen $\vec{J} = (I, J)$ oppgis i henholdsvis $x$- og $y$-retningene.
 Kodecelle 6 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 # Oppgave 2
@@ -221,7 +230,10 @@ algoritmen fra Oppgave 1 kombinert med det diffuserte bilde gir en rimelig god b
 Kodecelle 8 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 # Oppgave 3
@@ -275,7 +287,10 @@ Gjennomfør analysen fra Oppgave 1 for bildet som blir generert fra b). Prøv å
 Kodecelle 10 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 # Oppgave 4

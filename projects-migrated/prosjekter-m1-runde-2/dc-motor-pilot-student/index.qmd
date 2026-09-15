@@ -46,7 +46,10 @@ Etter prosjektet skal du kunne
 
 Vi antar blant annet konstant magnetfelt, lineær viskøs friksjon og konstante motorparametre. Startmotstanden er en klassisk resistiv startmetode. Moderne motordrifter bruker ofte elektronisk spenningsstyring, men den klassiske kretsen er velegnet til analyse med Ohms lov, lineær algebra og ODE-er.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -139,7 +142,10 @@ $$
 Kodecelle 6 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 V = 48.0
@@ -181,7 +187,10 @@ Beregn $\mathcal R_2$ og $\mathcal R_3$. Sammenlign også den teoretiske $\mathc
 Kodecelle 8 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 q = I_min/I_max
@@ -218,7 +227,10 @@ med $x=(R_1,R_2,R_3)^T$, og løs systemet med `np.linalg.solve`.
 Kodecelle 10 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 A = np.array([
@@ -260,7 +272,10 @@ Bruk $k_e=0.20\ \mathrm{V\,s/rad}$ og beregn koblingshastighetene for de tre tot
 Kodecelle 12 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 k_e = 0.20
@@ -281,7 +296,10 @@ Kontroller dette numerisk. Ved den siste overgangen kobles $R_3$ ut slik at bare
 Kodecelle 14 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 R_før = np.array([Rtot1, Rtot2, Rtot3])
@@ -306,7 +324,10 @@ Beregn varmeeffekten i den eksterne startmotstanden ved begynnelsen av hvert tri
 Kodecelle 16 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 R_ekstern = R_før - R_a
@@ -396,7 +417,10 @@ $$
 Kodecelle 20 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-20
 #| echo: true
 V_B = 24.0
@@ -425,7 +449,10 @@ Implementer høyresiden og Eulers metode. Sammenlign den numeriske løsningen me
 Kodecelle 22 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-22
 #| echo: true
 def redusert_motor(t, omega):
@@ -451,7 +478,10 @@ omega_eksakt_B = ...
 strøm_B = ...
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 fig, ax = plt.subplots(2, 1, sharex=True)
@@ -497,7 +527,10 @@ Implementer modellen og sammenlign
 Kodecelle 25 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 R_a_B = 0.40
@@ -592,7 +625,10 @@ $$
 Kodecelle 29 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-29
 #| echo: true
 L_C = 0.030
@@ -648,7 +684,10 @@ Kontroller likevekten ved å sette den inn i begge differensiallikningene.
 Kodecelle 31 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-31
 #| echo: true
 A_likevekt = np.array([
@@ -675,7 +714,10 @@ Implementer systemet og Eulers metode.
 Kodecelle 33 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-33
 #| echo: true
 def full_motor(t, x):
@@ -708,7 +750,10 @@ i_C = X_C[:, 0]
 omega_C = X_C[:, 1]
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-34
 #| echo: true
 fig, ax = plt.subplots(2, 1, sharex=True)
@@ -750,7 +795,10 @@ I SI-enheter er $k_e$ og $k_t$ numerisk like for en idealisert motor når enhete
 Kodecelle 36 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-36
 #| echo: true
 P_inn = ...
@@ -799,7 +847,10 @@ Implementer den seksjonerte starteren. Ta vare på hvilken motstandstilstand som
 Kodecelle 39 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-39
 #| echo: true
 V_D = 48.0
@@ -846,7 +897,10 @@ R_D = np.array([aktiv_motstand(w)[0] for w in omega_D])
 trinn_D = np.array([aktiv_motstand(w)[1] for w in omega_D])
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-40
 #| echo: true
 fig, ax = plt.subplots(3, 1, sharex=True, figsize=(8, 9))

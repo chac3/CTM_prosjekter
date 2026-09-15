@@ -104,7 +104,10 @@ b) Finne frekvensresponen.
 
 c) Velg passende verdier til $R,L,C$ og tegn Bode-plottet i kodefeltet under.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 # Bodeplott til de tre valgte filtrene

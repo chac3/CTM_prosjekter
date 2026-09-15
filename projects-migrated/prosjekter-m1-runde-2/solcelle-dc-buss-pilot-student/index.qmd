@@ -53,7 +53,10 @@ Etter prosjektet skal du kunne
 
 Solcellefeltene beskrives ikke med en full én-diodemodell eller svitsjende DC–DC-omformere. Kildespenningene er pedagogiske lokalmodeller. Del C kan tolkes som en lineær gjennomsnittsmodell rundt et valgt driftspunkt.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -95,7 +98,10 @@ n(\beta,\gamma)=
 \end{pmatrix}.}
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 def panelnormal(helning, asimut):
@@ -139,7 +145,10 @@ $$
 
 Den direkte normalstrålingen betegnes $DNI$.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 def soldata(t_timer):
@@ -194,7 +203,10 @@ Beregn den samlede innstrålingsvektoren ved kl. 8, 12 og 16.
 Kodecelle 8 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 albedo = 0.20
@@ -240,7 +252,10 @@ $$
 
 Denne sammenhengen er ikke en full PV-modell. Den brukes for å koble solgeometrien til kretsanalysen.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 V_mørk = 160.0
@@ -289,7 +304,10 @@ Implementer systemet og løs det ved kl. 8, 12 og 16. Kontroller residualet.
 Kodecelle 13 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 def resistiv_løsning(Voc, r=r_indre, R_last=R_last):
@@ -338,7 +356,10 @@ Tolk eventuelle negative grenstrømmer. Hvorfor er de et tegn på at modellen tr
 Kodecelle 15 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-15
 #| echo: true
 tid = 8.0
@@ -373,7 +394,10 @@ Hvis kildespenningen er lavere enn busspenningen, blokkerer dioden tilbakestrøm
 
 Dette er en ideell og stykkevis modell. Virkelige dioder har spenningsfall og mer komplisert strøm-spenningskarakteristikk.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-17
 #| echo: true
 def diode_strømmer(v_buss, t_timer):
@@ -396,7 +420,10 @@ Siden de ledende diodene ikke er kjent på forhånd, kan vi finne likevekten med
 
 I hovedoppgaven brukes rutenettsøk. Dette er ikke ment som generell rotfinningsundervisning.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-19
 #| echo: true
 def diode_likevekt(t_timer, v_min=0.0, v_max=260.0, antall=20001):
@@ -433,7 +460,10 @@ $$E_C=\frac12Cv^2$$
 
 og kan derfor dempe raske endringer i busspenningen.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 C_buss = 0.18  # F
@@ -486,7 +516,10 @@ Finn likevektsspenningen og tidskonstanten når alle tre dioder leder ved middag
 Kodecelle 23 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 Voc_middag = kildespenninger_transient(0.0)
@@ -518,7 +551,10 @@ Gjenta med en mindre og en større kondensator.
 Kodecelle 25 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 def euler_skalar(f, y0, sluttid, h):
@@ -619,7 +655,10 @@ $$
 Kodecelle 28 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-28
 #| echo: true
 L_gren = np.array([0.08, 0.08, 0.08])
@@ -655,7 +694,10 @@ Finn starttilstanden med et lineært system. Kontroller residualet.
 Kodecelle 30 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-30
 #| echo: true
 x_likevekt = ...
@@ -671,7 +713,10 @@ Simuler den samme skyggehendelsen som i del B. Sammenlign busspenning og grenstr
 Kodecelle 32 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-32
 #| echo: true
 def euler_system(f, x0, sluttid, h):
@@ -768,7 +813,10 @@ Transformer noen strømvektorer og tolk resultatene.
 Kodecelle 36 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-36
 #| echo: true
 q_m = np.array([1.0, 1.0, 1.0])/np.sqrt(3)
@@ -811,7 +859,10 @@ Beregn de tre pådragskoordinatene kl. 8, 12 og 16. Forklar hvilke moder som dom
 Kodecelle 39 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-39
 #| echo: true
 for tid in [8.0, 12.0, 16.0]:
@@ -856,7 +907,10 @@ Plott $i_m,i_d,i_c$ og busspenningen. Hvilken mode aktiveres mest når bare sør
 Kodecelle 42 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-42
 #| echo: true
 i_modal = ...
@@ -899,7 +953,10 @@ Egenverdiene bestemmer om transienten er oscillerende eller ikke, og hvor raskt 
 Kodecelle 45 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-45
 #| echo: true
 L0 = L_gren[0]
@@ -934,7 +991,10 @@ Sammenlign med den direkte firetilstandssimuleringen fra del C.
 Kodecelle 47 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-47
 #| echo: true
 # Implementer modal simulering og sammenlign maksimal forskjell.

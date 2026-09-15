@@ -68,7 +68,10 @@ $$
 
 Med tilsvarende randbetingelser $w'(0)=w(0)=0$, og $w''(L)=0$. Legg merke til at hvis du setter $v(x) = w'(x)$, får du en andreordens ligning for $v(x)$.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 
@@ -88,7 +91,10 @@ Med tilsvarende randbetingelser $w'(0)=w(0)=0$, og $w''(L)=0$. Legg merke til at
 k = \frac{\pi}{2L}
 $
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 

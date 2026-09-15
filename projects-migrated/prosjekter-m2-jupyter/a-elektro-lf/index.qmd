@@ -115,7 +115,10 @@ $$
 y(t)=2 g(t)- 3 g(t-1)\cdot u(t-1) + g(t-2)\cdot u(t-2)- g(t-4)\cdot u(t-4) + g(t-5)\cdot u(t-5)
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 import numpy as np
@@ -363,7 +366,10 @@ Transferfunksjon for filteret:  $H(s)=\dfrac{1e6}{s^2+2000s+1e6}$
 
 Under følger alternative kodinger for bodeplot.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 # Bodeplot for lavpassfilteret. Alternativ 1
@@ -391,7 +397,10 @@ ax2.set(ylabel='degrees')
 ax2.set(title='Faseforskyvning i grader')
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 # Bodeplot for lavpassfilteret. Alternativ 2
@@ -785,7 +794,10 @@ $$
 \mathbf{I}(x,\omega) = \mathbf{I}_s  \cosh(\gamma x) - \dfrac{\mathbf{V}_s}{Z_c}\, \sinh(\gamma x)
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-22
 #| echo: true
 
@@ -807,7 +819,10 @@ Vil signalet bli sendt ned linjen, uten tap av styrken til signalet (se under).
 Kodecelle 24 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-24
 #| echo: true
 import matplotlib.animation as animation
@@ -902,7 +917,10 @@ Kommenter resultatene. Kan du forklarer det du fant i oppgave b?
 
 Se under
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 # koden for U på bildet her
@@ -916,7 +934,10 @@ Vi ser forderving av signalet.
 
 se under
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-30
 #| echo: true
 import scipy.sparse as sp
@@ -943,13 +964,19 @@ U[-1,0] = -1/8
 V[0,-1] = 1
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-31
 #| echo: true
 print(U)
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-32
 #| echo: true
 print(V)
@@ -959,7 +986,10 @@ print(V)
 
 Matrisene finnes sånn:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-34
 #| echo: true
 U1 = np.fft.fft(U,axis=0)
@@ -977,7 +1007,10 @@ Vi ser at argumentet til diagonalelementene til forflytting er en rett linje (op
 
 Det savner vi i u
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-36
 #| echo: true
 # argumentet til diagonalelementene
@@ -1048,7 +1081,10 @@ Kan du foreslå hvordan vi kan velge $L$, $C$ og $R$ for at bølgehastigheten sk
 Kodecelle 38 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-38
 #| echo: true
 

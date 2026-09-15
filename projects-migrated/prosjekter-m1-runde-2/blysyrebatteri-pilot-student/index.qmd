@@ -55,7 +55,10 @@ Etter prosjektet skal du kunne
 
 Dette er en redusert undervisningsmodell. Parameterne er valgt for å gi realistiske størrelsesordener og tydelige tidsskalaer, men er ikke identifisert for et bestemt kommersielt batteri. Modellen skal ikke brukes til dimensjonering, sikkerhetsanalyse, ladealgoritmer eller levetidsprognoser.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -86,7 +89,10 @@ $$
 
 Ved utlading gir positive overspenninger lavere terminalspenning. Ved lading skifter de dynamiske bidragene fortegn gjennom strømmen.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 Q_N_Ah = 50.0
@@ -133,7 +139,10 @@ B_c=
 \end{pmatrix}.
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-6
 #| echo: true
 B_c = np.array([
@@ -164,7 +173,10 @@ Forklar hvorfor diffusjon kan omfordele syre, men ikke endre den totale syremeng
 Kodecelle 8 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 K_c = ...
@@ -194,7 +206,10 @@ $$
 \boxed{M_c\dot c=-K_cc.}
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 V_syremodell = np.array([0.42, 0.28, 0.38])
@@ -216,7 +231,10 @@ Beregn tidskonstantene $-1/\lambda$ for de negative egenverdiene.
 Kodecelle 12 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 egenverdier_c, P_c = ...
@@ -247,7 +265,10 @@ Den er symmetrisk og har de samme egenverdiene som $A_c$.
 Kodecelle 14 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 M_halv = np.diag(np.sqrt(V_syremodell))
@@ -295,7 +316,10 @@ $$
 Kodecelle 17 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-17
 #| echo: true
 I_puls = 40.0
@@ -325,7 +349,10 @@ Sammenlign flere tidssteg og plott oppbygging og relaksasjon av $u_+$.
 Kodecelle 19 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-19
 #| echo: true
 def strøm_puls(t):
@@ -370,7 +397,10 @@ A_u=
 \left(-\frac1{\tau_-},-\frac1{\tau_+},-\frac1{\tau_d}\right).
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 A_u = np.diag([-1/tau_neg, -1/tau_pos, -1/tau_diff])
@@ -394,7 +424,10 @@ Simuler pulsen og plott hvert spenningsbidrag separat. Sammenlign:
 Kodecelle 23 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 def euler_system(f, x0, sluttid, dt):
@@ -427,7 +460,10 @@ $$
 \boxed{\dot z=-\frac{\eta_I I_{MR}}{Q_N}.}
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 def U_eq_soc(z):
@@ -466,7 +502,10 @@ $$
 
 Ved lading skifter strømmen fortegn og syre produseres.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-29
 #| echo: true
 c_ref = 4.8  # mol/L, pedagogisk referansekonsentrasjon
@@ -493,7 +532,10 @@ $$I_+=\max(I,0),\qquad I_-=\max(-I,0).$$
 
 Den effektive polarisasjonen øker som $1/a$.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-31
 #| echo: true
 k_a = 1.2e-5   # 1/s
@@ -515,7 +557,10 @@ $$
 U_{eq}(z,c)=U_{eq}(z)+k_c\ln\left(\frac{\bar c_e}{c_{ref}}\right).}
 $$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-33
 #| echo: true
 def U_eq_hybrid(z, c_minus, c_plus):
@@ -538,7 +583,10 @@ RC-polarisasjonen skaleres med $1/a$.
 Kodecelle 35 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-35
 #| echo: true
 def strøm_hybrid(t):
@@ -590,7 +638,10 @@ Plott:
 Kodecelle 37 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-37
 #| echo: true
 X0_hybrid = np.concatenate([
@@ -648,7 +699,10 @@ Beregn egenverdier og egenvektorer. Sorter modene etter tidskonstant og tolk dem
 Kodecelle 41 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-41
 #| echo: true
 A_relaks = np.block([
@@ -691,7 +745,10 @@ $$
 
 Når $c_{Pb}$ blir liten, øker ladespenningen raskt og batteriet kan nå spenningsgrensen før SOC er 100 prosent.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-44
 #| echo: true
 c_Pb_eq = 1.0       # normalisert
@@ -735,7 +792,10 @@ $$
 
 Oksygenutviklingsstrømmen modelleres med et Tafel-lignende uttrykk over en terskelspenning.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-47
 #| echo: true
 U_gass = 2.38

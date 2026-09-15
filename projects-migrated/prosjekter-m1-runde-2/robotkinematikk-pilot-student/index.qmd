@@ -49,7 +49,10 @@ Et kortere prosjekt kan begrenses til
 
 Del D og enkelte parameterstudier kan flyttes til fordypning.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -85,7 +88,10 @@ $$
 
 Dette kalles framoverkinematikk: kjente leddvinkler gir kjent gripepunkt.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 L1 = 0.80
@@ -171,7 +177,10 @@ Løs de to $3\times3$-systemene og sett sammen $H$.
 Kodecelle 8 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 kamera = np.array([
@@ -214,7 +223,10 @@ Kodecelle 10 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, 
 Kodecelle 10 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-10
 #| echo: true
 kamera_h = np.column_stack([kamera, np.ones(3)])
@@ -240,7 +252,10 @@ Bruk $H$ til å finne punktet i robotkoordinater.
 Kodecelle 12 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-12
 #| echo: true
 p_kamera = np.array([340.0, 260.0, 1.0])
@@ -262,7 +277,10 @@ Beregn $H^{-1}$ og kontroller det nye punktet.
 Kodecelle 14 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 H_inv = ...
@@ -288,7 +306,10 @@ Forklar hvorfor kalibreringspunktene bør dekke en todimensjonal del av arbeidso
 Kodecelle 16 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 kamera_dårlig = np.array([
@@ -342,7 +363,10 @@ $$
 
 Studentene skal bruke matrisen, ikke utlede den med flervariabel kjerneregel.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-18
 #| echo: true
 def J_matrise(theta):
@@ -379,7 +403,10 @@ Bruk små vinkelendringer, for eksempel $0.5^\circ$, og sammenlign
 Kodecelle 20 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-20
 #| echo: true
 delta = np.deg2rad(0.5)
@@ -410,7 +437,10 @@ Kontroller resultatet med den ikke-lineære framoverkinematikken.
 Kodecelle 22 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-22
 #| echo: true
 delta_theta = np.deg2rad(np.array([1.0, -0.5]))
@@ -446,7 +476,10 @@ Løs systemet og kontroller med framoverkinematikken.
 Kodecelle 25 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-25
 #| echo: true
 delta_p_ønsket = np.array([5e-3, -3e-3])
@@ -493,7 +526,10 @@ Registrer
 Kodecelle 28 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-28
 #| echo: true
 theta2_liste = np.deg2rad([70.0, 10.0, 1.0])
@@ -531,7 +567,10 @@ Beregn egenverdier og egenvektorer i den valgte arbeidsstillingen. Tegn egenretn
 Kodecelle 31 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-31
 #| echo: true
 S = ...
@@ -567,7 +606,10 @@ Forklar hvorfor begge størrelsene varsler at det lokale inverse problemet blir 
 Kodecelle 33 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-33
 #| echo: true
 theta2_grid = np.deg2rad(np.linspace(1.0, 90.0, 180))
@@ -633,7 +675,10 @@ $$
 
 Kryssleddene betyr at bevegelsen i ett ledd påvirker momentet i det andre.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-36
 #| echo: true
 M = np.array([
@@ -690,7 +735,10 @@ Fullfør høyresiden og Eulers metode.
 Kodecelle 39 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-39
 #| echo: true
 def nullmoment(t):
@@ -731,7 +779,10 @@ $$
 
 Sett $\tau=0$ og simuler responsen.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-41
 #| echo: true
 X0 = np.concatenate([
@@ -779,7 +830,10 @@ Beregn og plott $\Delta x(t),\Delta y(t)$. Tegn også gripepunktets lokale bane.
 Kodecelle 43 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-43
 #| echo: true
 delta_p_C = ...
@@ -816,7 +870,10 @@ Hvordan påvirkes feilen dersom startavvikene dobles?
 Kodecelle 45 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-45
 #| echo: true
 p_full = []
@@ -850,7 +907,10 @@ Dette tilsvarer momentet
 
 $$\tau=Kq_d.$$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-47
 #| echo: true
 q_d = np.deg2rad(np.array([4.0, 2.0]))
@@ -929,7 +989,10 @@ $$K=P\Lambda P^T.$$
 Kodecelle 51 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-51
 #| echo: true
 egenverdier_K, P = ...
@@ -958,7 +1021,10 @@ Beskriv om leddene beveger seg samme vei eller motsatt vei i hver mode.
 Kodecelle 53 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-53
 #| echo: true
 amplitude = np.deg2rad(5.0)
@@ -1002,7 +1068,10 @@ $$m=1.5,\qquad c=4.5.$$
 Kodecelle 56 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-56
 #| echo: true
 m_modal = 1.5
@@ -1054,7 +1123,10 @@ Beregn $q_d$, simuler responsen og sammenlign
 Kodecelle 59 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-59
 #| echo: true
 delta_p_d = np.array([20e-3, 10e-3])

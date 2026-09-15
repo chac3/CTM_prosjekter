@@ -115,7 +115,10 @@ blir løst på en rimelig god måte. Hvordan synes dere algoritmen fungerer på 
 
 
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 
@@ -277,7 +280,10 @@ algoritmen fra Oppgave 1 kombinert med det diffuserte bilde gir en rimelig god b
 Kodecelle 9 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 
@@ -367,7 +373,10 @@ Gjennomfør analysen fra Oppgave 1 for bildet som blir generert fra b). Prøv å
 Kodecelle 11 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 import math as m
@@ -488,7 +497,10 @@ Løsningen vår var rundt 20 linjer. Det er greit om du skriver lang kode, men d
 Kodecelle 13 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 import numpy as np
@@ -548,7 +560,10 @@ plt.imshow(level, cmap="gray")
 plt.show()
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 

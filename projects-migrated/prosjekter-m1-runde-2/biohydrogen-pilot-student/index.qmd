@@ -59,7 +59,10 @@ Etter prosjektet skal du kunne
 
 Utbyttekoeffisientene er oppgitt på COD-basis. De skal ikke tolkes som vanlige massefraksjoner. Modellen beskriver ikke pH, gass-væske-likevekt, temperaturvariasjon, alle mikrobielle grupper eller alle mellomprodukter. Parameterne brukes som et pedagogisk referansetilfelle.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -94,7 +97,10 @@ $$k_C=3.62\ \mathrm{h^{-1}},\quad K_{S,C}=76\ \mathrm{g\,COD/L},$$
 
 $$k_L=0.030\ \mathrm{h^{-1}},\quad K_{S,L}=0.82\ \mathrm{g\,COD/L}.$$
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 f_CL, f_CA, f_CH = 0.72, 0.26, 0.02
@@ -155,7 +161,10 @@ $$r_C=4.0,\qquad r_L=1.0.$$
 Kodecelle 7 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 N = np.array([
@@ -207,7 +216,10 @@ $$
 Kodecelle 9 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 y_C = np.array([f_CA, 0.0, f_CH])
@@ -231,7 +243,10 @@ Plott acetat-, butyrat- og hydrogenutbytte som funksjon av $\theta$. Hvor stor a
 Kodecelle 11 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 theta = np.linspace(0.0, 1.0, 101)
@@ -268,7 +283,10 @@ $$
 
 For $C\ll K_{S,C}$ er reaksjonen omtrent første orden. For $C\gg K_{S,C}$ er den omtrent nullte orden.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-14
 #| echo: true
 def rate_C(C):
@@ -288,7 +306,10 @@ Plott $r_C(C)$ for $0\leq C\leq400$ g COD/L. Marker $K_{S,C}$ og maksimalraten $
 Kodecelle 16 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 C_grid = np.linspace(0.0, 400.0, 500)
@@ -309,7 +330,10 @@ Simuler 48 timer. Hindre at et numerisk steg gir negativ konsentrasjon.
 Kodecelle 18 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-18
 #| echo: true
 def euler_skalar(f, y0, sluttid, dt):
@@ -365,7 +389,10 @@ $$\dot H=f_{C,H}r_C+f_{L,H}r_L.$$
 Kodecelle 21 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-21
 #| echo: true
 def rate_L(L):
@@ -391,7 +418,10 @@ og simuler 240 timer.
 Kodecelle 23 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 def euler_system(f, x0, sluttid, dt):
@@ -441,7 +471,10 @@ $$H=H_C+H_L.$$
 Kodecelle 26 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-26
 #| echo: true
 # Lag en utvidet batchmodell med seks eller sju relevante bokføringsvariable.
@@ -478,7 +511,10 @@ $$
 Kodecelle 29 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-29
 #| echo: true
 C_inn = 160.0
@@ -511,7 +547,10 @@ Rapporter:
 Kodecelle 31 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-31
 #| echo: true
 x0_cstr = np.array([80.0, 20.0, 10.0, 1.0, 1.0])
@@ -564,7 +603,10 @@ $$
 Kodecelle 35 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-35
 #| echo: true
 def numerisk_jacobi(f, x, eps=1e-5):
@@ -592,7 +634,10 @@ Tolk:
 Kodecelle 37 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-37
 #| echo: true
 # J = numerisk_jacobi(lambda t, x: cstr_ode(t, x, tau_ref), x_stjerne)

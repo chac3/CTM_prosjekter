@@ -68,7 +68,10 @@ hvor fluksen $\vec{J} = (I, J)$ oppgis i henholdsvis $x-$ og $y-$ retninger.
 Kodecelle 3 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 
@@ -108,7 +111,10 @@ En vanlig form for varmetransport er konveksjon, hvor for eksempel temperaturfor
 Kodecelle 5 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 
@@ -145,7 +151,10 @@ Finn en numerisk løsning på samme ligning
 Kodecelle 7 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 
@@ -179,7 +188,10 @@ Velg enten forlengs Euler (med passende tidslengde) eller baklengs Euler.
 Kodecelle 9 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 
@@ -212,7 +224,10 @@ Løs ligningen numerisk.
 Kodecelle 11 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 
@@ -252,7 +267,10 @@ Legg ved noen "varmeplotter" (altså fargeplotter med rødt varmt, blått kaldt)
 Kodecelle 13 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 
@@ -285,7 +303,10 @@ Hvor lang tid tar det før temperaturen ved rander overstiger 60 grader? Er det 
 
 Prøv å endre størrelsen på mengde luft som modelleres med varmeligningen. Hvordan påvirker det resultatene over?
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 

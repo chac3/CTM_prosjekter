@@ -18,7 +18,10 @@ Vi studerer fluidmekanikken. Vi skal også ta en omvei innom trafikkflyt, både 
 
 Ligningene som modeller de to er ganske like! Vi begynner med en oversikt over fluidmekanikk, og hva det har med de vanligste PDE-typer å gjøre. Da studerer vi trafikk, og så gass.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 
@@ -52,7 +55,10 @@ Bruk Lax-Friedrichs diskretisering til å finne den initial høyde $h(0,x)$ som 
 Kodecelle 4 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-4
 #| echo: true
 

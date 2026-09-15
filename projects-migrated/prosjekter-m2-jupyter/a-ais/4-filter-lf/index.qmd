@@ -18,7 +18,10 @@ RLC-kretser kan anvendes til å separere ut forskjellige frekvensbånd fra musik
 
 I denne oppgaven skal vi bruke python til å *simulere* en slik filtrereing. Nedenfor ser du pythonkode som vil laste inn og spille av en liten lydfil med opptak av perkusjon.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-3
 #| echo: true
 from scipy.io import wavfile
@@ -32,7 +35,10 @@ Audio(audioSignal, rate=fs)
 
 Vi kan også studere innholdet i lydfilen ved å lage et plott av lydsignalet over tid:
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 import numpy as np
@@ -56,7 +62,10 @@ Kodecelle 7 følger en oppgavetekst og kan vurderes for `py-exercise` eller en i
 Kodecelle 7 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-7
 #| echo: true
 # Løsning!
@@ -118,7 +127,10 @@ Kodecelle 9 følger en oppgavetekst og kan vurderes for `py-exercise` eller en i
 Kodecelle 9 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 # Løsning!
@@ -166,7 +178,10 @@ Kodecelle 11 følger en oppgavetekst og kan vurderes for `py-exercise` eller en 
 Kodecelle 11 er merket eller formulert som en mulig løsning. Vurder å flytte den til lærermaterialet.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 # Løsning!

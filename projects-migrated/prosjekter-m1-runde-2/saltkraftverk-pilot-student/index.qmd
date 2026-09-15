@@ -34,7 +34,10 @@ Etter prosjektet skal du kunne
 - undersøke hvordan trykk og fiberlengde påvirker kraftproduksjonen,
 - diskutere forskjellen mellom en enkel og en mer detaljert modell.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-2
 #| echo: true
 import numpy as np
@@ -107,7 +110,10 @@ $$x=(Q_b,Q_t,Q_r,Q_u)^T.$$
 Kodecelle 5 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 Q_s = 1.00
@@ -152,7 +158,10 @@ Diskuter hvorfor en stor resirkuleringsgrad ikke nødvendigvis er praktisk, selv
 Kodecelle 8 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-8
 #| echo: true
 r_verdier = np.linspace(0.0, 0.9, 10)
@@ -211,7 +220,10 @@ $$Q_3=Q_0+q_1+q_2+q_3.$$
 Kodecelle 11 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 Q0 = 1.00
@@ -293,7 +305,10 @@ på intervallet $0\le z\le5$.
 Kodecelle 16 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-16
 #| echo: true
 def direkte_osmose(G):
@@ -325,7 +340,10 @@ Plott Euler-løsningen og den eksakte løsningen i samme figur. Gjenta med flere
 Kodecelle 18 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-18
 #| echo: true
 A1 = 0.20
@@ -358,7 +376,10 @@ Hvorfor er den relative økningen den samme for $Q$ og $G$?
 Kodecelle 20 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-20
 #| echo: true
 r0 = 50e-6  # 50 mikrometer
@@ -413,7 +434,10 @@ Implementer systemet og løs det med Eulers metode.
 Kodecelle 23 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-23
 #| echo: true
 A1 = 0.20
@@ -451,7 +475,10 @@ G_C = X_C[:, 0]
 p_C = X_C[:, 1]
 ```
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-24
 #| echo: true
 fig, ax = plt.subplots(2, 1, sharex=True)
@@ -491,7 +518,10 @@ Beregn den relative saltkonsentrasjonen $c(z)/c_0$. Forklar hvorfor brinen forty
 Kodecelle 27 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-27
 #| echo: true
 c_relativ = ...
@@ -526,7 +556,10 @@ Siden de skalerte parameterne ikke har fysiske enheter, skal resultatet foreløp
 Kodecelle 29 inneholdt ufullstendig kode, for eksempel `...`. Cellen er bevart, men må klassifiseres og testes manuelt før publisering.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-29
 #| echo: true
 eta_turb = 0.90
@@ -572,7 +605,10 @@ $$
 Kodecelle 31 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-31
 #| echo: true
 p0_verdier = np.linspace(0.1, 2.0, 30)

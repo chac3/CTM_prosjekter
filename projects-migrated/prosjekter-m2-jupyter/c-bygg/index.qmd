@@ -78,7 +78,10 @@ Bruk Eulers metode (husk ProgNumSikk/Matte 1) til å spore posisjon til partikke
 
 
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-5
 #| echo: true
 
@@ -177,7 +180,10 @@ når $\Delta x \rightarrow 0$ og $\Delta t \rightarrow 0$.
 
 Legg merke til at når vi deriverer en fysisk størrelse med hensyn på en fysisk variabel (sånn som $\frac{\partial J}{\partial x}$) endres enheten til $J$ ved at vi må dividere med enheten til $x$. Dvs. enheten til  $\frac{\partial J}{\partial x}$ er biler pr. tid pr. lengde.
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-9
 #| echo: true
 
@@ -232,7 +238,10 @@ Bruk Lax-Friedrichs metode til å løse ligningen for andre verdier av $p$. Hvor
 Kodecelle 11 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-11
 #| echo: true
 
@@ -315,7 +324,10 @@ Sett $\nu = 0$ og løs ligningen med karakteristikker. Får vi sjokk? Tenk på g
 Kodecelle 13 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-13
 #| echo: true
 
@@ -379,7 +391,10 @@ Prøv noen andre initialverdier. Oppstår det sjokk?
 Kodecelle 15 følger en oppgavetekst og kan vurderes for `py-exercise` eller en interaktiv Pyodide-celle.
 :::
 
-```{python}
+```{pyodide-python}
+#| edit: true
+#| runbutton: true
+#| autorun: false
 #| label: cell-15
 #| echo: true
 
