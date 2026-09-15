@@ -35,3 +35,17 @@ Thumbs.db
 *.out
 *.fls
 *.fdb_latexmk
+
+/.quarto/
+**/*.quarto_ipynb
+
+# Quarto cache and temporary files
+/.quarto/
+**/*.quarto_ipynb
+
+# Migration backup files
+*.qmd.bak
+*.md.bak
+
+# Generated copies from local Pyodide previews
+/projects-migrated/**/coi-serviceworker.js
