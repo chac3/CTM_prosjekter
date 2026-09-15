@@ -1,5 +1,11 @@
 project:
   type: website
+  output-dir: _site
+
+  render:
+    - index.qmd
+    - projects/**/*.qmd
+    - projects-migrated/**/*.qmd 
 
 lang: nb
 
